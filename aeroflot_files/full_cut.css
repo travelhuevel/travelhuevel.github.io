@@ -1,0 +1,532 @@
+html, body {
+    max-width: 1920px;
+    min-width: 987px;
+}
+
+body {
+    color: #333333;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0;
+    min-width: 987px;
+    padding: 0;
+    background: #02458D;
+}
+
+div.main-header, div.main-container { vertical-align: top; }
+div.main-header, div.main-footer, div.main-header a { color: #ffffff; }
+
+
+div.main-header a.logo { float: left; }
+div.main-container, div.content {z-index: 1000; position: relative; }
+
+
+div.fl-down, div.fl-down a, div.fl-down a img{ z-index: 0; position: relative; width: 100%; display: block; }
+
+#block_leftmenu { float: left; width: 262px; background: #02458D; margin-bottom: -3em; position: relative; }
+
+div.content { background-color: #ffffff; padding: 2em; border-bottom: 3px solid #FF8100; min-height: 25em;}
+
+div.content > h1 { color: #02458D; font-weight: normal; padding-bottom: 0.5em; margin-bottom: 1em; }
+div.content a { color: #02458D; }
+
+
+/* Titles */
+fieldset legend, h4.legend{
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #1E64A9;
+    text-indent: 1em;
+    margin: 0;
+    padding: 0.6em 0;
+    text-align: left;
+    width: 100%;
+}
+
+table.list {
+    margin-bottom: 1em;
+}
+
+table.list tr.even td { background-color: #efefef;}
+table.list tr.odd td { background-color: #dfdfdf;}
+
+
+
+table.list th, table.list td{
+    margin: 0;
+    padding: 0.6em 1em;
+    text-align: left;
+    vertical-align: top;
+}
+
+table.list th{ border-top: 1px solid #1E64A9; }
+table.list th:first-child{ border-left: 1px solid #1E64A9; }
+table.list th:last-child, table.list th.last-child{ border-right: 1px solid #1E64A9; }
+
+table.list td{ border-bottom: 1px solid #cccccc;}
+table.list tr.no-border td{ border-bottom: none; padding-bottom: 0em; }
+table.list td:last-child, table.list td.last-child { border-right: 1px solid #cccccc; }
+table.list td:first-child{ border-left: 1px solid #cccccc; }
+
+
+table.list th{ color: #ffffff; font-weight: bold; }
+
+
+/* Forms */
+form { margin-top: 1em; }
+fieldset { border: 1px solid #cccccc; margin-bottom: 1em;}
+
+fieldset legend{
+    float: left;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    margin-bottom: 0.5em;
+}
+
+fieldset div .readonly_field {
+    font-size: 13px;
+}
+
+fieldset > div, fieldset > label, fieldset > p, fieldset > b{ padding: 0.5em 1.6em; color: #333333; display: block; background-color: #f0f0f0; margin: 0; }
+fieldset > div:first-child { border-top: none; }
+fieldset div input,
+fieldset div button,
+fieldset div select,
+fieldset div .readonly_field {
+    padding: 0 10px;
+    height: 29px;
+    display: inline-block;
+    border: 1px solid #a6a6a6;
+    vertical-align: middle;
+}
+
+fieldset div input,
+fieldset div button,
+fieldset div select,
+fieldset div .readonly_field,
+.ui-widget fieldset div input,
+.ui-widget fieldset div button,
+.ui-widget fieldset div select,
+.ui-widget fieldset div .readonly_field {
+    font-family: Tahoma;
+}
+
+
+
+fieldset div .readonly_field{
+    line-height: 27px;
+}
+
+fieldset input[readonly], fieldset textarea[readonly] {
+    background-color: #D4D0C8;
+    color: #808080;
+}
+
+fieldset div.optional .staticvalue {
+    vertical-align: middle;
+}
+
+table td select { width: 100%; }
+
+fieldset div input.checkbox, fieldset div input.radio, fieldset div input[type=checkbox], fieldset div input[type=radio] { width: auto; border: 0;}
+
+fieldset div input,
+fieldset div > select,
+fieldset div > textarea,
+fieldset div > .readonly_field {
+    width: 56%;
+}
+fieldset div label,
+fieldset div div.label,
+fieldset div label.caption {
+    vertical-align: top;
+    font-weight: bold;
+    width: 20%;
+    display: inline-block;
+    padding: 0.3em 0;
+}
+fieldset div label.header {width: auto;}
+fieldset div div.row {display:table-cell;  padding: 0.2em}
+fieldset div label img, fieldset div div.label img { border: 1px solid #999999; }
+/*fieldset > div > span.button { margin-left: 25%; }*/
+fieldset > div > span.button.no-padding{ margin-left: 0.5em; vertical-align: top; }
+fieldset > div > div { display: inline-block; }
+
+fieldset div small, span.help_text { width: 56%; display: block; color: #436382; font-style: regular; font-size: 11px; }
+span.help_text a { color: #436382; }
+fieldset div.required > label:after, fieldset div.mark_required > label:after, span.required, span.mark_required{ color: #FF8100; content: "*"; padding-left: 0.2em; }
+
+fieldset div.has_errors div.error_messages { padding-left: 20%; }
+div.error_messages { color: #ff0000; font-size: 11px; font-style: italic; display: block; }
+fieldset .has_errors input, fieldset .has_errors select { border-color: #ff0000; }
+
+fieldset table.fields th{
+    background-color: #f3f3f3;
+    border: 1px solid #a3a3a3;
+    border-right: none;
+    border-left: none;
+    padding: 0.5em;
+    text-align: left;
+}
+fieldset table.fields td{ padding: 0.2em; }
+
+
+
+div.message { border-width: 0.2em; border-style: solid; padding: 1.4em; margin: 0.5em 0}
+div.message.default { border: none; padding: 0; margin: 0}
+div.message.error { color: #ff0000; border-color: #ff0000}
+div.message.info { color: #FF8100; border-color: #FF8100}
+
+div.message:focus {
+    outline: black dotted 1px;
+}
+
+fieldset div input.button,
+fieldset div button.button,
+fieldset div input[type=button],
+fieldset div input[type=submit] {
+    width: auto;
+    padding: 0 1em;
+}
+
+/* Tables */
+
+body table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+div.main-header div.user-info { margin-top: -30px; text-align: right; margin-right: 0.4em; display: block; }
+ul.user-menu li { display: inline-block; border-left: 1px dotted #ffffff; line-height: 0.8em; list-style-type: none; margin: 0 0 0 0.5em; padding: 0 0 0 0.7em;}
+ul.user-menu li a { padding: 0; color: #ffffff; }
+ul.user-menu li:first-child {border-left: none;}
+
+
+/* buttons */
+div.buttons{
+    padding-bottom: 1em;
+}
+
+div.buttons small {
+    padding-bottom: 2em;
+    display: block;
+}
+
+div.buttons.right{
+    text-align: right;
+    margin-right: 0em; 
+    margin-left: 0em; 
+}
+
+div.buttons .button{
+    margin-right: 0.5em;
+}
+
+input.button, button.button, span.button a, span.button label, span.button.active a{
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5em 2em;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    min-width: 10em;
+    color: #000000;
+    font-family: arial, sans-serif;
+    font-size: 15px;
+    /*vertical-align: middle;*/
+ }
+
+span.button.small a {
+    vertical-align:top;
+}
+input.button.small, button.button.small, span.button.small a {
+    padding: 0 1em;
+    line-height: 27px;
+    font-size: 13px;
+    font-weight: normal;
+    min-width: 1.35em;
+    cursor: pointer;
+}
+
+input.datepicker {
+    background: url(../images/calendar.png) no-repeat center, linear-gradient(to bottom, #ededed 0%,#c2c2c2 100%); /* W3C */
+    margin-left: 0.5em;
+}
+
+span.button a, span.button label, input.button.gray, button.button.gray{
+    color: #464646;
+    background-color: #eaeaea;
+    border-color: #acacac;
+}
+input.button.inactive, button.button.inactive, span.button.inactive a{
+    color: #999999;
+    border-color: #d3d3d3;
+}
+
+input.button, button.button, span.button.active a {
+    background-color: #FF7C00;
+    border-color: #FF9B00;
+    cursor: pointer;
+    cursor: hand;
+}
+
+input[disabled].button,
+button[disabled].button,
+span.button.active a[disabled] {
+    color: #6C6C6C;
+    background: #C5C5C5;
+    border-color: #ACACAC;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+
+span.up-button{
+}
+
+span.up-button a{
+    background-color: #3369a8;
+    padding: 3px 9px;
+    font-size: 10px;
+    border: 2px solid #1E64A9;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+span.button.datepicker img{
+    float: left;
+}
+
+/* end buttons */
+
+input.uppercase {
+    text-transform: uppercase;
+}
+
+b.code, strong.code{
+    color: #ffffff;
+    display: block;
+    padding: 1em 3em;
+    font-size: 250%;
+    border: 1px solid #1E64A9;
+    text-align: center;
+}
+
+/* from old */
+p.s_link, .info_link {
+    padding: 0.5em;
+    text-indent: 1em;
+    display: block;
+}
+
+p.s_link {
+    background: url("//www.aeroflot.ru/cms/sites/all/themes/aeroflot/media/img/link.png") no-repeat scroll left center;
+    background-size: 15px;
+}
+
+.info_link {
+    background: url("//www.aeroflot.ru/cms/sites/all/themes/aeroflot/media/img/overview_grey.png") no-repeat scroll left center;
+}
+
+
+div#block_leftmenu ul{
+    margin: 0;
+    padding: 0;
+}
+div#block_leftmenu ul li{
+    list-style: none;
+    width: 234px;
+}
+div#block_leftmenu ul li a{
+    height: 29px;
+    margin: 0;
+    padding: 18px 0 0px 63px;
+    position: relative;
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+div#block_leftmenu ul li.last a{
+    height: 30px;
+}
+
+a.menu-973 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_973.gif);}
+a.menu-973:hover, li.active-trail a.menu-973 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_973.gif);}
+a.menu-17163 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_17163.gif);}
+a.menu-17163:hover, li.active-trail a.menu-17163 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_17163.gif);}
+a.menu-989 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_989.gif);}
+a.menu-989:hover, li.active-trail a.menu-989 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_989.gif);}
+a.menu-17166 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_992.gif);}
+a.menu-17166:hover, li.active-trail a.menu-17166 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_992.gif);}
+a.menu-5386 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_5386.gif);}
+a.menu-5386:hover, li.active-trail a.menu-5386 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_5386.gif);}
+a.menu-5387 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_5387.jpg);}
+a.menu-5387:hover, li.active-trail a.menu-5387 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_5387.jpg);}
+a.menu-1049 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_1049.gif);}
+a.menu-1049:hover, li.active-trail a.menu-1049 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_1049.gif);}
+a.menu-1048 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_1048.gif);}
+a.menu-1048:hover, li.active-trail a.menu-1048 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_1048.gif);}
+a.menu-5385 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_5385.gif);}
+a.menu-5385:hover, li.active-trail a.menu-5385 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_5385.gif);}
+a.menu-17197 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_17197.gif);}
+a.menu-17197:hover, li.active-trail a.menu-17197 {background-image: url(//www.aeroflot.ru/cms/files/menu_icons/menu_icon_layout_17197.gif);}
+
+
+
+button.ui-datepicker-trigger {
+    background: url("../images/calendar.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border: 0 none;
+    height: 20px;
+    padding: 0;
+    vertical-align: middle;
+    width: 20px;
+}
+
+div.calendar{ z-index: 100000; }
+
+#cboxLoadedContent {
+    border-top: 3px solid #FFB200 !important;
+}
+
+/* стили для всплывающего окна кнопки Позвонить с сайта */
+#call_form { padding: 6px; }
+#call_form p { padding: 0; }
+.freecall_header { font-size: 13px; font-weight: bold; margin: 5px 0; }
+.callbuttons { text-align: center; }
+
+    /* /стили для всплывающего окна кнопки Позвонить с сайта */
+
+
+
+div#colorbox > div {visibility: hidden;}
+div#colorbox div#cboxWrapper {visibility: visible;}
+
+
+#ajax_error { display: none; }
+
+
+
+@media print {
+    div.main-header {display: none; }
+    div.main-footer {display: none; }
+    div.user-menu {display: none; }
+    div.block-banner {display: none; }
+    div.topnav, #topnav, #breadcrumbs, iframe {display: none; }
+}
+
+
+.admin_menu {
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.admin_menu ul {
+    float: left;
+    padding: 0;
+    margin: 0 0 0 2em;
+}
+
+.admin_menu ul:FIRST-CHILD {
+    margin-left: 0;
+}
+
+.admin_menu li {
+    list-style-type: none;
+    background: none;
+    padding: 0;
+    margin: 0 0 0.2em;
+    display: block;
+    line-height: 15px;
+    white-space: nowrap;
+}
+
+.admin_menu li a {
+    background: url("//www.aeroflot.ru/cms/sites/all/themes/aeroflot/media/img/passive_lnk_arrow.png") no-repeat scroll left center;
+    padding: 0.3em 0.7em 0.4em 1.3em;
+    display: inline-block;
+}
+
+.admin_menu li.selected a {
+    background: #FFB10D url("//www.aeroflot.ru/cms/sites/all/themes/aeroflot/media/img/active_lnk_arrow.png") no-repeat scroll left center;
+    color: #FFF;
+}
+
+
+.js_disabled {
+    top: 0; left: 0;
+    height: 50px;
+    background-color: #FFB10D;
+    color: #563720;
+    font-size: 21px;
+    padding: 4px;
+    text-align: center;
+    line-height: 21px;
+}
+
+/* style for visually hiding content that will be read by a screen reader
+http://webaim.org/techniques/css/invisiblecontent/#absolutepositioning */
+.off-screen {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*clone style from layout3.css and layout.css*/
+div#topmenu a span {
+    width: 64px;
+    height: 64px;
+    display: block;
+    float: left;
+    margin: 8px 8px 0 8px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    box-shadow: 1px 1px 3px #2d4a6f;
+    -moz-box-shadow: 1px 1px 3px #2d4a6f;
+    -webkit-box-shadow: 1px 1px 3px #2d4a6f;
+}
+
+div.content label.caption {
+    color: #2d7cc7;
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin: 0.5em 0;
+    text-align: left;
+    display: block;
+}
+
+/*Ticket #1907*/
+a:focus {
+    outline: 1px dotted black;
+}
+a:active {
+    outline: 1px dotted black;
+}
+
+div.language-selector {
+    margin-top: 1px;
+    margin-left: 3px;
+    z-index: 1001;
+}
+
+div.language-selector:focus {
+    outline-color: #000;
+    outline-style: dotted;
+    outline-width: 1px;
+}
+
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}

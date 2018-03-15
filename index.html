@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.aeroflot.ru/personal/activity -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="apple-itunes-app" content="app-id=580243869">
+    <!--[if gt IE 8]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
+    <!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=8" /><![endif]-->
+
+    <link rel="shortcut icon" href="https://www.aeroflot.ru/static/images/favicon.ico" type="image/x-icon">
+
+    <title>
+            My account |
+
+            Aeroflot Bonus Account |
+        Aeroflot    </title>
+            <link charset="UTF-8" href="./aeroflot_files/reset.css" rel="stylesheet" type="text/css" media="screen">
+        <link charset="UTF-8" href="./aeroflot_files/colorbox.css" rel="stylesheet" type="text/css" media="screen">
+        <link charset="UTF-8" href="./aeroflot_files/layout.css" rel="stylesheet" type="text/css" media="screen">
+        <link charset="UTF-8" href="./aeroflot_files/layout3.css" rel="stylesheet" type="text/css" media="screen">
+        <link charset="UTF-8" href="./aeroflot_files/jquery-ui-1.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" src="./aeroflot_files/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/jquery.colorbox-1.5.4.min.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/layout.js"></script>
+        <link charset="UTF-8" href="./aeroflot_files/menu.css" rel="stylesheet" type="text/css">
+    <link charset="UTF-8" href="./aeroflot_files/header.css" rel="stylesheet" type="text/css" media="screen">
+    <link charset="UTF-8" href="./aeroflot_files/footer.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./aeroflot_files/menu.js"></script>
+    <script type="text/javascript" src="./aeroflot_files/header.js"></script>
+    <script type="text/javascript" src="./aeroflot_files/footer.js"></script>
+            <link charset="UTF-8" href="./aeroflot_files/full_cut.css" rel="stylesheet" type="text/css">
+        <link charset="UTF-8" href="./aeroflot_files/full3.css" rel="stylesheet" type="text/css">
+        <link charset="UTF-8" href="./aeroflot_files/user_menu_v1.css" rel="stylesheet" type="text/css">
+        <link charset="UTF-8" href="./aeroflot_files/cab.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" src="./aeroflot_files/jquery-ui-1.10.4.custom.min.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/jquery.popover.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/jquery.inputmask.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/afl.jquery-ui.js"></script>
+    
+    
+    <link charset="UTF-8" href="./aeroflot_files/tooltip.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./aeroflot_files/api.js"></script>
+        <script type="text/javascript" src="./aeroflot_files/aeroflot-gib.js" async="async"></script>
+        <script type="text/javascript" src="./aeroflot_files/aeroflot-ksp-v2.min.js" async="async"></script>
+        <script type="text/javascript" src="./aeroflot_files/aflcab.vars.js"></script>
+<script type="text/javascript" src="./aeroflot_files/aflcab.i18n.js"></script>
+    <script type="text/javascript" src="./aeroflot_files/afl.core.js"></script>
+<script type="text/javascript" src="./aeroflot_files/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="./aeroflot_files/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="./aeroflot_files/jquery.combobox.js"></script>
+<script type="text/javascript" src="./aeroflot_files/afl.jquery.inputChecker.js"></script>
+<script type="text/javascript" src="./aeroflot_files/jquery.tooltip.js"></script>
+<script type="text/javascript" src="./aeroflot_files/aflcab.profile.js"></script>
+
+    <script type="text/javascript">
+        (function($) {
+            $.aflButtonDatepicker && $.aflButtonDatepicker.setDefaults({
+                changeMonth: true,
+                changeYear: true,
+                inputLabelText: _('lk.help.calendar'),
+                ariaLabelText: _('lk.label.day_month_year'),
+                tooltip: true
+            });
+
+            $.colorbox && $.extend($.colorbox.settings, {
+                close: _('lk.help.close'),
+                previous: _('lk.help.previous'),
+                next: _('lk.help.next'),
+                slideshowStart: _('lk.help.start_slideshow'),
+                slideshowStop: _('lk.help.stop_slideshow'),
+                scrolling: false
+            });
+        })(jQuery);
+
+        $(function() {
+            $('input').placeholder();
+            var trans = { choose: _('label.unspecified') };
+            $('select[data-combobox]').combobox({trans: trans});
+
+            setTimeout(function() {  // for NVDA
+                $('.message.error:visible:first').attr("tabindex", "0").focus();
+            }, 500);
+
+            // jQuery formatted selector to search for focusable items
+            var focusableElementsString = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]";
+
+            $('body').on("keydown", "#colorbox", function(event) {
+                var $this = $(this);
+                if (event.keyCode == 9) {
+                    var children = $this.find('*'),
+                        focusableItems = children.filter(focusableElementsString).filter(':visible'),
+                        focusedItem = $(document.activeElement),
+                        numberOfFocusableItems = focusableItems.length,
+                        focusedItemIndex = focusableItems.index(focusedItem);
+                    if (!event.shiftKey && (focusedItemIndex == numberOfFocusableItems - 1)){
+                        focusableItems.get(0).focus();
+                        event.preventDefault();
+                    }
+                    if (event.shiftKey && focusedItemIndex == 0) {
+                        focusableItems.get(numberOfFocusableItems - 1).focus();
+                        event.preventDefault();
+                    }
+                }
+            });
+
+            $('#GenPassModal').bind('after_show', function() {
+                $('.zclip').each(function() {
+                    var $this = $(this);
+                    if ($this.find('noembed').length === 0) {
+                        $this.append("<noembed>You need to install Adobe flash player to view this content</noembed>");
+                    }
+                })
+            });
+        });
+    </script>
+
+head>
+
+        <body class="page-type-ext" style="">
+    
+
+<!-- ru-en -->
+<div class="sr_only">
+    <a href="https://www.aeroflot.ru/personal/activity#main-container" onclick="document.getElementById(&#39;main-container&#39;).focus();">Go to main content</a>
+</div>
+
+
+
+
+    <noscript>
+        &lt;div class="js_disabled"&gt;
+            Your browser does not support JavaScript. You must use a Web browser that supports JavaScript for our website to function properly.
+        &lt;/div&gt;
+    </noscript>
+
+    <div class="main-body">
+
+        <div class="main-header" role="banner">
+            <a class="logo" href="https://www.aeroflot.ru/ru-en" title="Company">
+                <img width="286" height="80" src="./aeroflot_files/logo_en.gif" alt="Company">
+            </a>
+            <a class="logo" href="http://www.skyteam.com/ru/" title="SkyTeam Alliance">
+                <img width="42" height="80" src="./aeroflot_files/logo_skyteam.png" alt="SkyTeam Alliance">
+            </a>
+                                        <!-- [template_mod: "esi"] -->        <!-- rUnversioned directory 2017-10-09 16:06:14 -->
+
+
+
+
+<div id="header-menu" role="navigation"><div class="language-selector2 menu-btn" role="button" title="Change country and language" tabindex="0"><div class="locale-lang-button"><img alt="Russia" style="width: 20px; height: 14px; margin: 2px 5px 0px 0px;" src="./aeroflot_files/flag_rus_copy.png" align="left" width="20px" height="14px">ENG</div></div><div class="locale-with-language-selector" role="dialog" tabindex="0" style="display:none"><span class="current-locale-lang">Current: Russia <img alt="" src="./aeroflot_files/flag_rus_copy.png" height="14" width="20" class="current">(English)</span><div class="choose-country"><span id="rg1_label">Country</span><div id="locale" class="select-no-scroll select-locale-lang"><ul role="radiogroup" aria-labelledby="rg1_label"><li data-locale="ru" class="selected" aria-checked="true" tabindex="0" role="radio"> Russia  <img alt="" align="right" src="./aeroflot_files/flag_rus_copy.png"></li><li data-locale="gb" aria-checked="false" tabindex="-1" role="radio"> United Kingdom  <img alt="" align="right" src="./aeroflot_files/flag_gb.png"></li><li data-locale="us" aria-checked="false" tabindex="-1" role="radio"> USA  <img alt="" align="right" src="./aeroflot_files/flag_us.png"></li><li data-locale="de" aria-checked="false" tabindex="-1" role="radio"> Germany  <img alt="" align="right" src="./aeroflot_files/flag_de.png"></li><li data-locale="fr" aria-checked="false" tabindex="-1" role="radio"> France  <img alt="" align="right" src="./aeroflot_files/flag_fr.png"></li><li data-locale="es" aria-checked="false" tabindex="-1" role="radio"> Spain  <img alt="" align="right" src="./aeroflot_files/flag_es.png"></li><li data-locale="it" aria-checked="false" tabindex="-1" role="radio"> Italy  <img alt="" align="right" src="./aeroflot_files/flag_it.png"></li><li data-locale="cn" aria-checked="false" tabindex="-1" role="radio"> China  <img alt="" align="right" src="./aeroflot_files/flag_cn.png"></li><li data-locale="kr" aria-checked="false" tabindex="-1" role="radio"> Korea  <img alt="" align="right" src="./aeroflot_files/flag_kr.png"></li><li data-locale="jp" aria-checked="false" tabindex="-1" role="radio"> Japan  <img alt="" align="right" src="./aeroflot_files/flag_jp.png"></li><li data-locale="xx" aria-checked="false" tabindex="-1" role="radio"> Other country  <img alt="" align="right" src="./aeroflot_files/flag_int_copy.png"></li></ul></div></div><div class="choose-language"><span id="rg2_label">Language</span><div id="lang" class="select-no-scroll select-locale-lang"><ul role="radiogroup" aria-labelledby="rg2_label"><li data-lang="ru" aria-checked="false" tabindex="-1" role="radio" style="display: block;">Русский</li><li data-lang="en" class="selected" aria-checked="true" tabindex="0" role="radio" style="display: block;">English</li><li data-lang="de" aria-checked="false" tabindex="-1" role="radio" style="display: none;">Deutsch</li><li data-lang="fr" aria-checked="false" tabindex="-1" role="radio" style="display: none;">Français</li><li data-lang="es" aria-checked="false" tabindex="-1" role="radio" style="display: none;">Español</li><li data-lang="it" aria-checked="false" tabindex="-1" role="radio" style="display: none;">Italiano</li><li data-lang="zh" aria-checked="false" tabindex="-1" role="radio" style="display: none;">中文</li><li data-lang="ja" aria-checked="false" tabindex="-1" role="radio" style="display: none;">日本語</li><li data-lang="ko" aria-checked="false" tabindex="-1" role="radio" style="display: none;">한국어</li></ul></div></div><a id="set_lang_locale" class="menu-btn" role="button" href="https://www.aeroflot.ru/personal/activity#">OK</a></div><a title="Search" class="menu-btn search-icon" href="https://www.aeroflot.ru/ru-en/search"><span></span></a><a class="home-page-link menu-btn home-icon" title="Home page" href="https://www.aeroflot.ru/ru-en"><span></span></a><a class="menu-btn login-icon" href="https://www.aeroflot.ru/personal/login?_preferredLanguage=en"><span></span>My Aeroflot Bonus Account
+        </a><a class="menu-btn" href="https://www.aeroflot.ru/ru-en/special_offers/corporate">
+            Corporate Travel
+        </a><a class="menu-btn" href="https://www.aeroflot.ru/ru-en/about/contact">
+            Contacts
+        </a><a class="menu-btn" href="https://www.aeroflot.ru/ru-en/news">
+            News
+        </a><a class="menu-btn orange" href="https://www.aeroflot.ru/feedback?_preferredLanguage=en">
+            Feedback
+        </a></div>
+                    </div>
+                                <!-- [template_mod: "esi"] -->        <!-- rUnversioned directory 2017-10-09 16:06:14 -->
+
+
+<div id="topnav" role="navigation"><div id="topmenu" data-margin-left="0" data-skip-first-item="1" data-page-width="1351" data-outer-width="1120" class="" style="width: 981px;"><ul class="menu">
+	<li class="expanded"><a href="https://www.aeroflot.ru/ru-en/booking">
+		<span style="background:url(aeroflot_files/973_uhhQH7f.png)"></span><strong>Booking</strong></a></li>
+		<li class="expanded"><a href="https://www.aeroflot.ru/ru-en/online_services">
+			<span style="background:url(aeroflot_files/17163_xrziSEf.png)"></span><strong>Online Services</strong></a>
+			<ul class="menu" style="position: absolute; left: -6px; width: 784px;"><li style="width: 249px;">
+				<a href="https://www.aeroflot.ru/ru-en/information/checkin/web_checkin">
+					<span style="background:url(//www.aeroflot.ru/media/page_icons/1046_gu0LduP.png)"></span>
+					<strong>Online Check-In</strong></a></li><li style="width: 249px;">
+						<a href="https://reservation.aeroflot.ru/SSW2010/7B47/myb.html?abcd&amp;lang=en">
+	<span style="background:url(//www.aeroflot.ru/media/page_icons/73143_gIAj0sh.png)"></span><strong>Change/Refund My Ticket</strong></a>
+	</li><li style="width: 249px;"><a href="https://m.aeroflot.ru/b/info/pnr/load?_preferredLanguage=en">
+	<span style="background:url(//www.aeroflot.ru/media/page_icons/3480_zuioH1c.png)"></span><strong>Check the Reservation</strong></a>
+	</li><li style="width: 249px;"><a href="https://shop.aeroflot.ru/?ln=en">
+	<span style="background:url(//www.aeroflot.ru/media/page_icons/icon_p_CLmRFVp.png)"></span><strong>Online Store</strong></a></li>
+	<li style="width: 249px;"><a href="http://onlineboard.aeroflot.ru/en">
+		<span style="background:url(//www.aeroflot.ru/media/page_icons/1232_uZblOtH.png)"></span><strong>Online Timetable</strong></a></li>
+		<li style="width: 249px;"><a href="http://www.aeroflot.ru/schedule/schedule?_preferredLanguage=en">
+	<span style="background:url(//www.aeroflot.ru/media/page_icons/1233_tLz75zb.png)"></span><strong>Online Schedule</strong></a></li>
+	<li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/online_services/virtual_certificates">
+	<span style="background:url(//www.aeroflot.ru/media/page_icons/101855.png)"></span><strong>Virtual Gift Certificates</strong></a></li>
+	<li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/mobile_check-in"><span style="background:url(//www.aeroflot.ru/media/page_icons/7307_0CLHb0g.png)"></span><strong>Mobile Check-In</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/preparation/baggage/lost"><span style="background:url(//www.aeroflot.ru/media/page_icons/4380_f6ENCgY.png)"></span><strong>Delayed Baggage Tracing</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/personal/cargo_tracking?_preferredLanguage=en"><span style="background:url(//www.aeroflot.ru/media/page_icons/106677.png)"></span><strong>Cargo Tracking</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/co2/info"><span style="background:url(//www.aeroflot.ru/media/page_icons/105873.png)"></span><strong>CO2 Calculator</strong></a></li><li style="width: 249px;"><a href="http://www.aeroflot.europcar.com/?lang=en&amp;xtor=AD-2002-[aeroflot_onlineservice_icon]-[]-[0]-[aeroflot.ru]-[HP]-[]"><span style="background:url(//www.aeroflot.ru/media/page_icons/Аренда-автомобилеи-Europcar.png)"></span><strong>Europcar Car Rental</strong></a></li><li style="width: 249px;"><a href="https://www.transfer.aeroflot.ru/en"><span style="background:url(//www.aeroflot.ru/media/page_icons/Персональныи-трансфер.png)"></span><strong>Personal Transfer</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/special_offers/bahn_ag"><span style="background:url(//www.aeroflot.ru/media/page_icons/Совместные-перевозки-с-Deutsche-Bahn.png)"></span><strong>Aeroflot &amp; Deutsche Bahn AG</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/online_services/austr_zd"><span style="background:url(//www.aeroflot.ru/media/page_icons/Совместные-перевозки-с-Deutsche-Bahn_piHoyAI.png)"></span><strong>Intermodal Carriage by Aeroflot and Österreichischen Bundesbahnen</strong></a></li></ul></li><li class="expanded"><a href="https://www.aeroflot.ru/ru-en/special_offers"><span style="background:url(aeroflot_files/989_HInnb2v.png)"></span><strong>Special Offers</strong></a>
+	<ul class="menu" style="position: absolute; left: -202px; width: 784px;"><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/destination_offers"><span style="background:url(//www.aeroflot.ru/media/page_icons/86087_fqEspiM.png)"></span><strong>Best Fares and Deals</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/special_offers/new_offers"><span style="background:url(//www.aeroflot.ru/media/page_icons/21151_YJsr4EG.png)"></span><strong>New Destinations</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/special_offers/business-pass"><span style="background:url(//www.aeroflot.ru/media/page_icons/17757_UqyKzTQ.png)"></span><strong>Business Pass</strong></a></li><li style="width: 249px;"><a href="http://www.aeroflot.ru/ru-en/special_offers/conference/"><span style="background:url(//www.aeroflot.ru/media/page_icons/icon-3-1.png)"></span><strong>Arranging Events with Aeroflot</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/special_offers/shuttle"><span style="background:url(//www.aeroflot.ru/media/page_icons/Аэрофлот-Шаттл.png)"></span><strong>"Aeroflot-Shuttle" Program</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/en/milimania/"><span></span><strong>Miles Mania</strong></a></li></ul></li>
+	<li class="expanded"><a href="https://www.aeroflot.ru/ru-en/information"><span style="background:url(aeroflot_files/992_regdkKn.png)"></span><strong>Reference Information</strong></a><ul class="menu" style="position: absolute; left: -398px; width: 784px;"><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/purchase"><span style="background:url(//www.aeroflot.ru/media/page_icons/109237_wBjz2xP.png)"></span><strong>How to Buy a Ticket</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/legal"><span style="background:url(//www.aeroflot.ru/media/page_icons/992_rlzft6X.png)"></span><strong>Legal Information</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/preparation"><span style="background:url(//www.aeroflot.ru/media/page_icons/3938.png)"></span><strong>Travel Preparation</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/onboard"><span style="background:url(//www.aeroflot.ru/media/page_icons/1238.png)"></span><strong>On Board</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/checkin"><span style="background:url(//www.aeroflot.ru/media/page_icons/4205.png)"></span><strong>How to Check-In</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/preparation/special_transportation/disabled"><span style="background:url(//www.aeroflot.ru/media/page_icons/4199_WDlD22c.png)"></span><strong>Passengers with Disabilities</strong></a></li><li style="width: 249px;"><a href="https://evisa.kdmid.ru/en-US" rel="nofollow"><span style="background:url(//www.aeroflot.ru/media/page_icons/2_icons-visa2.png)"></span><strong>e-Visa Information for Foreign Nationals</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/information/airport"><span style="background:url(//www.aeroflot.ru/media/page_icons/4088.png)"></span><strong>Airport</strong></a></li></ul></li><li class="expanded active-trail"><a href="https://www.aeroflot.ru/ru-en/afl_bonus"><span style="background:url(aeroflot_files/1048_trvw1ht.png)"></span><strong>Aeroflot Bonus</strong></a>
+	<ul class="menu" style="position: absolute; left: -594px; width: 784px;"><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/afl_bonus/spend_miles"><span style="background:url(//www.aeroflot.ru/media/page_icons/5143.png)"></span><strong>Spend Miles</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/afl_bonus/bonus_news"><span style="background:url(//www.aeroflot.ru/media/page_icons/5955.png)"></span><strong>News</strong></a></li><li style="width: 249px;"><a href="https://rewards.aeroflot.ru/en/"><span style="background:url(//www.aeroflot.ru/media/page_icons/104275.png)"></span><strong>Rewards Catalogue</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/afl_bonus/partners"><span style="background:url(//www.aeroflot.ru/media/page_icons/5152.png)"></span><strong>Programme Partners</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/afl_bonus/rules_club"><span style="background:url(//www.aeroflot.ru/media/page_icons/5179.png)"></span><strong>Elite Club</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/afl_bonus/earn_miles"><span style="background:url(//www.aeroflot.ru/media/page_icons/5106.png)"></span><strong>Earn Miles</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/ru-en/afl_bonus/programme"><span style="background:url(//www.aeroflot.ru/media/page_icons/5103.png)"></span><strong>About Aeroflot Bonus</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/personal/login?_preferredLanguage=en"><span style="background:url(//www.aeroflot.ru/media/page_icons/6194.png)"></span><strong>Join Aeroflot Bonus</strong></a></li><li style="width: 249px;"><a href="https://www.aeroflot.ru/en/milimania/"><span style="background:url(//www.aeroflot.ru/media/page_icons/Mmania_icon_en.png)"></span><strong>Miles Mania</strong></a></li></ul></li></ul></div></div>
+        
+        <div class="header-print-only">
+            <img alt="Company" src="./aeroflot_files/logo_print.gif" width="200" height="50" border="0">
+            <div>
+                Moscow: +7 (495) 223-5555 / Russia: 8-800-444-5555 (free)
+            </div>
+        </div>
+
+        <div id="main-container" class="main-container" role="main">
+            <div class="main-content">
+                                        <div class="role_menu registered-role-menu">
+                                
+
+
+        
+        <div id="user-menu" class="user-menu GOLD-tier-level enabled-menu">
+<div class="user-menu-container">
+    <div class="top-row">
+        <ul class="user-tool-menu">
+                <li><a class="profile" href="https://www.aeroflot.ru/personal/profile/settings">Settings</a></li>
+            <li><a class="quit" href="https://www.aeroflot.ru/personal/logout">Sign Out</a></li>
+        </ul>
+            <h1>Your miles</h1>
+    </div>
+
+        <div class="card">
+            <a href="https://www.aeroflot.ru/personal" title="Number, first and last name of member, card expiry date">
+                <div class="card_info">
+                    <span id="member_loyalty_id" title="Membership number">123456789</span>
+                    <span id="user_display_name" title="Member&#39;s first and last name">TRAVEL HUEVEL</span>
+                    <span id="card_exp_date" title="Card expiry date">valid thru 02/19</span>
+                </div>
+            </a>
+        </div>
+
+            <ul class="user-tool-menu user-tool-menu-bottom">
+                <li>
+                        <a id="passbook_send_link" class="passbook send_email" href="https://www.aeroflot.ru/personal/passbook_form" data-title="Send the Aeroflot Bonus Apple Wallet card to your e-mail">Add to Apple Wallet</a>
+                </li>
+            </ul>
+
+        <div class="miles" title="Your accumulated miles" role="complementary">
+            <div class="left-column manual-popover-init" id="member_miles_value_column" data-content="Miles active till 17.10.2019" tabindex="0" role="link" aria-labelledby="member_miles_value_column member_miles_value" data-title="" title="" aria-label="Miles active till 17.10.2019">
+                <div class="all div_text" id="member_miles_value">
+                    <span class="value">93810</span>
+                    <div class="miles_sign">&nbsp;</div>
+                    <span class="sr_only">miles</span>
+                </div>
+            </div>
+            <div class="right-column" role="grid" tabindex="0" aria-readonly="true">
+                <div class="miles_msg_row" role="row">
+                    <span id="miles_msg" role="gridcell">To confirm Gold tier</span>:</span>
+                </div>
+                <div role="row">
+                    <div class="div_row div_text" style="width: 40%;" role="rowheader">
+                         <div class="row text">Qualifying miles</div>
+                         <div id="segs_bar_label" class="row text">Segments</div>
+                    </div>
+
+                    <div class="div_row" style="width: 54%;" role="gridcell">
+                        <span class="sr_only">Miles and segments statistics</span>
+                        <div class="row progress" id="current_year_miles">
+                            <span class="sr_only">The current number of qualifying miles and number of miles required to upgrade level in loyalty program</span>
+                            <div class="bar"><span class="fill" style="width: 30%;">&nbsp;</span>
+                                <div class="values"><span class="current">15000</span>
+                                    <span class="upgrade">50 000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row progress" id="current_year_segments">
+                            <span class="sr_only">The current number of segments and number of segments required to upgrade level in loyalty program</span>
+                            <div class="bar"><span class="fill" style="width: 40%;">&nbsp;</span>
+                                <div class="values"><span class="current">20</span>
+                                    <span class="upgrade">50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div_row" style="width: 1%;" role="gridcell">
+                        <span class="sr_only">Additional information</span>
+                        <div class="row question manual-popover-init">
+                            <a href="https://www.aeroflot.ru/personal/activity#" class="icon-button small i-question unselect manual-popover-init" role="presentation" unselectable="on" id="pass_rules" data-content="Miles credited for regular flights with Aeroflot and partner airlines. Extra miles credited according to your member tier, within special promotions or collected with programme partners are not qualifying miles and do not influence your Aeroflot Bonus tier." data-title="" title="" aria-label="Miles credited for regular flights with Aeroflot and partner airlines. Extra miles credited according to your member tier, within special promotions or collected with programme partners are not qualifying miles and do not influence your Aeroflot Bonus tier."></a>
+                        </div>
+                        <div class="question manual-popover-init">
+                            <a href="https://www.aeroflot.ru/personal/activity#" class="icon-button small i-question unselect manual-popover-init" role="presentation" unselectable="on" id="pass_rules_segs" data-content="One section of a journey, from the point of take-off to the point of landing. For example, the journey Moscow – St. Petersburg – Moscow is two flight segments." data-title="" title="" aria-label="One section of a journey, from the point of take-off to the point of landing. For example, the journey Moscow – St. Petersburg – Moscow is two flight segments."></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <nav>
+        <ul class="menu">
+            
+        <li><a href="https://www.aeroflot.ru/personal/profile/info" title="Account">Account</a></li>
+            
+        <li><a href="https://m.aeroflot.ru/b/my?_preferredLanguage=en" title="My Reservations">My Reservations</a></li>
+            
+    <li class="hint-button">
+        <a href="https://www.aeroflot.ru/feedback/my?_preferredLanguage=en" title="Feedback form">
+            <div class="feedback_link_container" data-url="https://www.aeroflot.ru/feedback/ws/unread_sr_qty">
+                <div class="feedback_label_container">Feedback form</div>
+                <div class="feedback_count_container" style="display: none;">
+                    <img class="feedback_mail" title="Feedback form" src="./aeroflot_files/feedback_mail.png" alt="New messages">
+                    <div class="requests_count">0</div>
+                </div>
+            </div>
+        </a>
+    </li>
+            
+        <li><a href="https://www.aeroflot.ru/personal/activity" title="Account transactions">Account transactions</a></li>
+            
+        <li><a href="https://www.aeroflot.ru/personal/spend_miles" title="Spend miles">Spend miles</a></li>
+            
+        <li class="hint-button">
+            <a href="https://www.aeroflot.ru/personal/fellow_travellers" title="Fellow travellers">
+                <div class="fellow_travellers_link_container">
+                    <div class="fellow_travellers_label_container">Fellow travellers</div>
+                    <div class="fellow_travellers_notify_container empty">
+                        <img class="fellow_traveller_notifier" title="Fellow travellers" src="./aeroflot_files/received_invite.png" alt="">
+                        <div class="invitations_number">0</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+            
+        <li><a href="https://www.aeroflot.ru/personal/retro_claim_reward" title="Credit miles">Credit miles</a></li>
+            
+        <li><a href="https://www.aeroflot.ru/personal/profile/sms_info" title="SMS-Info">SMS-Info</a></li>
+            
+        <li><a href="https://www.aeroflot.ru/personal/forum" title="Forum">Forum</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+<script>
+    $(function() {
+        $('div.question .icon-button').popover({
+            container: 'body',
+            placement: 'top auto',
+            trigger: 'hover, focus'
+        });
+
+        $('#member_miles_value_column').popover({
+            placement: 'top auto',
+            html: 'true',
+            container: 'body',
+            trigger: 'focus, hover'
+        });
+
+        function getContent(url, title, data) {
+            $.ajax({
+                url: url,
+                type: data ? 'POST' : 'GET',
+                data: data,
+                xhrFields: { withCredentials: true },
+                success: function(response) {
+                    if (response['isSuccess']) {
+                        var data = response['data'];
+
+                        if (data['error'] === 'auth_error') {
+                            if (data['url']) location.href = data['url'];
+                            return;
+                        }
+
+                        var $html = $(data['html']);
+                        $html.find('form.passbook').submit(function () {
+                            getContent(url, title, $(this).serialize());
+                            return false;
+                        });
+
+                        $.colorbox({ title: title, html: $html, width: 650 });
+                    }
+                }
+            });
+        }
+
+        var $pbLink = $('#passbook_send_link');
+        $pbLink.on('click', function(e) {
+            e.preventDefault();
+            var $target = $(e.currentTarget),
+                href = $target.attr('href'),
+                title = $target.attr('data-title');
+            getContent(href, title);
+        });
+
+        var $fb = $('.feedback_link_container');
+        $fb.one('check', function() {
+            $.ajax({
+                url: 'https://www.aeroflot.ru/feedback/ws/unread_sr_qty',
+                xhrFields: { withCredentials: true },
+                success: function(response) {
+                    var qty = response['unread_sr_qty'] || 0,
+                        show = !!qty;
+
+                    $fb.toggleClass('success', show)
+                        .children('.feedback_count_container').toggle(show)
+                        .children('.requests_count').text(qty);
+                },
+                error: function() {
+                    $fb.find('.requests_count').hide();
+                },
+                complete: function() {
+                    $fb.checked = true;
+                }
+            });
+        });
+        $fb.trigger('check');
+    });
+    //# sourceURL=menu__main.js
+</script>        <script>
+    $(function () {
+        var $board = $('.widgets-board');
+        if ($board.length && !$board.hasClass('loaded')) {
+            $board.find('.resultloader').hide();
+
+            $.fn.showWidgetWithValue = function(value) {
+                return this.each(function () {
+                    $(this).html(value).closest('.widget-wrapper').show();
+                });
+            };
+
+            var duration = '5 years 11 months',
+                inactive = false,
+                activeDate = '10.10.2020';
+
+            if (duration) $('#id_duration_of_participation').showWidgetWithValue(duration);
+            if (inactive) {
+                var $element = $('#id_miles_exp_text');
+                $element.html($element.attr('data-was-active'));
+            }
+            if (activeDate) $('#id_miles_exp_date').showWidgetWithValue(activeDate);
+
+            $board.addClass('loaded');
+        }
+    });
+    //# sourceURL=widget_board__data.js
+</script>                        </div>
+                                <div class="content">
+                                                <h1>My account</h1>
+                                            
+    
+        
+    <div id="siebel_error" class="message error hidden">This web page is under maintenance. Showing data saved on
+        <span id="siebel_last_upd"></span>
+    </div>
+    <div id="siebel_saved_request" class="message info hidden">
+        
+        Your request has been saved but the page is under maintenance now. <a id="siebel_request_anchor">Try again later</a> to repeat your request
+    </div>
+    
+    
+
+
+<div id="st-activity-data">
+    <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="my_account" aria-labelledby="ui-id-1" aria-selected="false">
+                    <a href="https://www.aeroflot.ru/personal/activity#my_account" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">My account</a>
+                </li>
+                <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="flight" aria-labelledby="ui-id-2" aria-selected="true">
+                    <a href="https://www.aeroflot.ru/personal/activity#flight" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">Flights</a>
+                </li>
+                <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="misc" aria-labelledby="ui-id-3" aria-selected="false">
+                    <a href="https://www.aeroflot.ru/personal/activity#misc" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">Other activities</a>
+                </li>
+                <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="redemption" aria-labelledby="ui-id-4" aria-selected="false">
+                    <a href="https://www.aeroflot.ru/personal/activity#redemption" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-4">Redeemed awards</a>
+                </li>
+        </ul>
+
+            <div id="my_account" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                        <div role="status" class="message hidden">
+    </div>
+
+                <div class="tab-content" id="content1509314026500">
+
+
+
+    <fieldset id="fs_id_myaccount_form" class="expand">
+        <legend class="unselect toggler">Account status</legend>
+        <div class="slide">
+            
+    
+    <div class="field_box optional">
+        <label>Enrollment date</label>
+        <span class="readonly_field ">01.01.2010</span>
+    </div>
+
+    
+    <div class="field_box optional">
+        <label>Amount of miles</label>
+        <span class="readonly_field ">0</span>
+    </div>
+
+        
+    <div class="field_box optional">
+        <label>Miles activity date</label>
+        <span class="readonly_field ">10.10.2020</span>
+            
+    
+    <a href="javascript:void(0);" data-content="Date until which your miles can be redeemed. Your miles are active if you have at least one flight with Aeroflot Group (SU code) in an eligible  tariff group registered on your Aeroflot Bonus account during the last 24 months. If there are no such flights registered on you Aeroflot Bonus account, your miles will become inactive and be canceled the year following the one they expired in." class="icon-button i-question unselect readonly-field" data-html="true" data-title="" title="" aria-label="Date until which your miles can be redeemed. Your miles are active if you have at least one flight with Aeroflot Group (SU code) in an eligible tariff group registered on your Aeroflot Bonus account during the last 24 months. If there are no such flights registered on you Aeroflot Bonus account, your miles will become inactive and be canceled the year following the one they expired in."></a>
+
+    </div>
+
+    
+    <div class="field_box optional">
+        <label>Qualifying miles</label>
+        <span class="readonly_field ">0</span>
+            
+    
+    <a href="javascript:void(0);" data-content="Miles credited for regular flights with Aeroflot and partner airlines. Extra miles credited according to your member tier, within special promotions or collected with programme partners are not qualifying miles and do not influence your Aeroflot Bonus tier." class="icon-button i-question unselect readonly-field" data-html="true" data-title="" title="" aria-label="Miles credited for regular flights with Aeroflot and partner airlines. Extra miles credited according to your member tier, within special promotions or collected with programme partners are not qualifying miles and do not influence your Aeroflot Bonus tier."></a>
+
+    </div>
+
+    
+    <div class="field_box optional">
+        <label>Segments during this calendar year</label>
+        <span class="readonly_field ">20</span>
+    </div>
+
+    
+    <div class="field_box optional">
+        <label>Business segments during this calendar year</label>
+        <span class="readonly_field ">0</span>
+    </div>
+
+        
+    <div class="field_box optional">
+        <label>Available awards for double miles</label>
+        <span class="readonly_field ">2</span>
+    </div>
+
+
+        </div>
+    </fieldset>
+
+</div>
+            </div>
+            <div id="flight" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
+                    
+    <div class="search_block">
+        <label for="flight_date_from">From</label>
+        <div class="dp_container"><div class="dp_control"><input type="text" id="flight_date_from" aria-label="Day. Month. Year" class="md date_from" name="date_from" data-button-field="flight_date_from_btn"><span class="dp_button_container"><label style="display: none;" for="flight_date_from_btn">Calendar</label><input type="button" tabindex="-1" aria-hidden="true" id="flight_date_from_btn" data-title="Calendar" data-original-title="" title="" data-main-field="flight_date_from" value="30.10.2016" class="hasDatepicker"></span></div></div>
+
+        <label for="flight_date_to">till</label>
+        <div class="dp_container"><div class="dp_control"><input type="text" id="flight_date_to" aria-label="Day. Month. Year" class="md date_to" name="date_to" data-button-field="flight_date_to_btn"><span class="dp_button_container"><label style="display: none;" for="flight_date_to_btn">Calendar</label><input type="button" tabindex="-1" aria-hidden="true" id="flight_date_to_btn" data-title="Calendar" data-original-title="" title="" data-main-field="flight_date_to" value="30.10.2017" class="hasDatepicker"></span></div></div>
+
+        <span class="button small active">
+        <a href="javascript:void(0);" role="button" class="search-button" title="Display">Display</a>
+    </span>
+        <span class="button small active">
+        <a href="javascript:void(0);" role="button" class="reset-button" title="Reset">Reset</a>
+    </span>
+    </div>
+
+                        <div role="status" class="message hidden">
+    </div>
+
+                <div class="tab-content" id="content1509314026501">
+
+
+
+    
+    
+    <table class="list text-center" width="100%" tabindex="0">
+            <caption class="off-screen">List of flights</caption>
+        <thead>
+                
+                <tr><th aria-label="Activity Date" text="Activity Date" role="button" class="desc sortable unselect" data-sort_type="dateRu" tabindex="0">Activity Date</th>
+                
+                <th aria-label="Airline" text="Airline" role="button" tabindex="0" class="sortable unselect">Airline</th>
+                
+                <th aria-label="Flight" text="Flight" role="button" tabindex="0" class="sortable unselect">Flight</th>
+                
+                <th aria-label="Origin" text="Origin" role="button" tabindex="0" class="sortable unselect">Origin</th>
+                
+                <th aria-label="Destination" text="Destination" role="button" tabindex="0" class="sortable unselect">Destination</th>
+                
+                <th aria-label="Booking class" text="Booking class" role="button" class="not-sortable" tabindex="0">Booking class</th>
+                
+                <th aria-label="Fare type" text="Fare type" role="button" tabindex="0" class="sortable unselect">Fare type</th>
+                
+                <th aria-label="Total amount of miles" text="Total amount of miles" role="button" data-sort_type="int" tabindex="0" class="sortable unselect">Total amount of miles</th>
+                
+                <th aria-label="Qualifying miles" text="Qualifying miles" role="button" data-sort_type="int" tabindex="0" class="sortable unselect">Qualifying miles</th>
+        </tr></thead>
+        <tbody>
+			
+             
+                <tr>
+        <td>25.02.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0023</td>
+        <td>LED</td>
+        <td>SVO</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+                <tr>
+        <td>25.02.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0006</td>
+        <td>SVO</td>
+        <td>LED</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+             
+                <tr>
+        <td>19.02.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0151</td>
+        <td>HAV</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>15.02.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0150</td>
+        <td>SVO</td>
+        <td>HAV</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>10.02.2018</td>
+        <td>AIR FRANCE</td>
+        <td>AF 1844</td>
+        <td>CDG</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td></td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+    
+             			
+             
+                <tr>
+        <td>25.01.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0023</td>
+        <td>LED</td>
+        <td>SVO</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+                <tr>
+        <td>25.01.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0006</td>
+        <td>SVO</td>
+        <td>LED</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+             
+                <tr>
+        <td>19.01.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0151</td>
+        <td>HAV</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>15.01.2018</td>
+        <td>AEROFLOT</td>
+        <td>SU 0150</td>
+        <td>SVO</td>
+        <td>HAV</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>10.01.2018</td>
+        <td>AIR FRANCE</td>
+        <td>AF 1844</td>
+        <td>CDG</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td></td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+    
+             			
+             
+                <tr>
+        <td>25.12.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0023</td>
+        <td>LED</td>
+        <td>SVO</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+                <tr>
+        <td>25.12.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0006</td>
+        <td>SVO</td>
+        <td>LED</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+             
+                <tr>
+        <td>19.12.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0151</td>
+        <td>HAV</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>15.12.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0150</td>
+        <td>SVO</td>
+        <td>HAV</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>10.12.2017</td>
+        <td>AIR FRANCE</td>
+        <td>AF 1844</td>
+        <td>CDG</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td></td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+    
+             		
+             
+                <tr>
+        <td>25.11.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0023</td>
+        <td>LED</td>
+        <td>SVO</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+                <tr>
+        <td>25.11.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0006</td>
+        <td>SVO</td>
+        <td>LED</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+             
+                <tr>
+        <td>19.11.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0151</td>
+        <td>HAV</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>15.11.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0150</td>
+        <td>SVO</td>
+        <td>HAV</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>10.11.2017</td>
+        <td>AIR FRANCE</td>
+        <td>AF 1844</td>
+        <td>CDG</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td></td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+    
+             		
+             
+                <tr>
+        <td>25.10.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0023</td>
+        <td>LED</td>
+        <td>SVO</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+                <tr>
+        <td>25.10.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0006</td>
+        <td>SVO</td>
+        <td>LED</td>
+        <td>N</td>
+        <td>NVOR</td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+             
+                <tr>
+        <td>19.10.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0151</td>
+        <td>HAV</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>15.10.2017</td>
+        <td>AEROFLOT</td>
+        <td>SU 0150</td>
+        <td>SVO</td>
+        <td>HAV</td>
+        <td>T</td>
+        <td>TCLA</td>
+        <td>8943</td>
+        <td>5962</td>
+    </tr>
+             
+                <tr>
+        <td>10.10.2017</td>
+        <td>AIR FRANCE</td>
+        <td>AF 1844</td>
+        <td>CDG</td>
+        <td>SVO</td>
+        <td>T</td>
+        <td></td>
+        <td>750</td>
+        <td>500</td>
+    </tr>
+    
+             
+ 
+        </tbody>
+    </table>
+
+
+</div>
+            </div>
+            <div id="misc" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    
+    <div class="search_block">
+        <label for="misc_date_from">From</label>
+        <div class="dp_container"><div class="dp_control"><input type="text" id="misc_date_from" aria-label="Day. Month. Year" class="md date_from" name="date_from" data-button-field="misc_date_from_btn"><span class="dp_button_container"><label style="display: none;" for="misc_date_from_btn">Calendar</label><input type="button" tabindex="-1" aria-hidden="true" id="misc_date_from_btn" data-title="Calendar" data-original-title="" title="" data-main-field="misc_date_from" value="30.10.2016" class="hasDatepicker"></span></div></div>
+
+        <label for="misc_date_to">till</label>
+        <div class="dp_container"><div class="dp_control"><input type="text" id="misc_date_to" aria-label="Day. Month. Year" class="md date_to" name="date_to" data-button-field="misc_date_to_btn"><span class="dp_button_container"><label style="display: none;" for="misc_date_to_btn">Calendar</label><input type="button" tabindex="-1" aria-hidden="true" id="misc_date_to_btn" data-title="Calendar" data-original-title="" title="" data-main-field="misc_date_to" value="30.10.2017" class="hasDatepicker"></span></div></div>
+
+        <span class="button small active">
+        <a href="javascript:void(0);" role="button" class="search-button" title="Display">Display</a>
+    </span>
+        <span class="button small active">
+        <a href="javascript:void(0);" role="button" class="reset-button" title="Reset">Reset</a>
+    </span>
+    </div>
+
+                        <div role="status" class="message hidden">
+    </div>
+
+                <div class="tab-content"></div>
+            </div>
+            <div id="redemption" aria-labelledby="ui-id-4" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">
+                    
+    <div class="search_block">
+        <label for="redemption_date_from">From</label>
+        <div class="dp_container"><div class="dp_control"><input type="text" id="redemption_date_from" aria-label="Day. Month. Year" class="md date_from" name="date_from" data-button-field="redemption_date_from_btn"><span class="dp_button_container"><label style="display: none;" for="redemption_date_from_btn">Calendar</label><input type="button" tabindex="-1" aria-hidden="true" id="redemption_date_from_btn" data-title="Calendar" data-original-title="" title="" data-main-field="redemption_date_from" value="30.10.2016" class="hasDatepicker"></span></div></div>
+
+        <label for="redemption_date_to">till</label>
+        <div class="dp_container"><div class="dp_control"><input type="text" id="redemption_date_to" aria-label="Day. Month. Year" class="md date_to" name="date_to" data-button-field="redemption_date_to_btn"><span class="dp_button_container"><label style="display: none;" for="redemption_date_to_btn">Calendar</label><input type="button" tabindex="-1" aria-hidden="true" id="redemption_date_to_btn" data-title="Calendar" data-original-title="" title="" data-main-field="redemption_date_to" value="30.10.2017" class="hasDatepicker"></span></div></div>
+
+        <span class="button small active">
+        <a href="javascript:void(0);" role="button" class="search-button" title="Display">Display</a>
+    </span>
+        <span class="button small active">
+        <a href="javascript:void(0);" role="button" class="reset-button" title="Reset">Reset</a>
+    </span>
+    </div>
+
+                        <div role="status" class="message hidden">
+    </div>
+
+                <div class="tab-content"></div>
+            </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./aeroflot_files/jquery.tableSort.js"></script>
+
+<script type="text/javascript">
+    (function() {
+        var $content = $('div.content'),
+            $dateFrom = $content.find('.date_from'),
+            $dateTo = $content.find('.date_to'),
+            options =  {
+                showMonthAfterYear: false,
+                showOtherMonths: true,
+                yearRange: '1990:+0',
+                minDate: new Date(1990, 0, 1),
+                maxDate: 0,
+                doReverseYears: true,
+                onChangeMonthYear: function (year, month, inst) {
+                    $(this).aflButtonDatepicker('setDate', new Date(year, month - 1, inst.selectedDay));
+                }
+            };
+
+        function viewMessages($message, $content, messages) {
+            messages = messages || 'Error loading data, try again later';
+            $message.text(messages).addClass('error').removeClass('default info hidden');
+            $content.empty();
+        }
+
+        function loadData($tab, forceLoad) {
+            var path = $tab.attr('id'),
+                $content = $tab.children('.tab-content'),
+                doRequest = $content.is(':empty') || forceLoad;
+
+            if (!doRequest) return;
+
+            var $message = $tab.children('div.message'),
+                $dateFrom = $tab.find('.date_from'),
+                $dateTo = $tab.find('.date_to');
+
+            $.ajax({
+                url: '/personal/activity/get_data/' + path,
+                data: {
+                    activity_tab: path,
+                    from_date: function() {
+                        return $.datepicker.formatDate('yy-mm-dd', $dateFrom.length ? $dateFrom.aflButtonDatepicker('getDate') : '');
+                    },
+                    to_date: function() {
+                        return $.datepicker.formatDate('yy-mm-dd', $dateTo.length ? $dateTo.aflButtonDatepicker('getDate') : '');
+                    }
+                },
+                beforeSend: function() {
+                    $tab.children('.message').addClass('hidden');
+                    $content.showLoader();
+                },
+                success: function(response) {
+                    if (response['isSuccess']) {
+                        $content.html(response['data']);
+                        $content.find('table').tableSort();
+                        $content.find('.icon-button').popover({
+                            container: '.main-content',
+                            trigger: 'focus, hover'
+                        });
+                        return true;
+                    }
+
+                    $.eachAjaxErrors(response, function(error) {
+                        if (error === 'invalid_date') {
+                            viewMessages($message, $content, response['data']);
+                        }
+                    });
+                },
+                error: function(jqXHR) {
+                    if (jqXHR.readyState === 0 && jqXHR.status === 0) return;
+                    viewMessages($message, $content);
+                },
+                complete: function() {
+                    $content.hideLoader();
+                }
+            });
+        }
+
+        $.datepicker._generateMonthYearHeaderOriginal = $.datepicker._generateMonthYearHeader;
+
+        $.datepicker._generateMonthYearHeader = function(inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort) {
+            var content = $.datepicker._generateMonthYearHeaderOriginal(inst, drawMonth, drawYear, minDate, maxDate, secondary, monthNames, monthNamesShort),
+                $content = $(content);
+
+            if (inst.settings['doReverseYears']) {
+                var years = $content.find('.ui-datepicker-year');
+                years.html(years.children().get().reverse());
+            }
+
+            return $('<p/>').append($content).html();
+        };
+
+        function initDates() {
+            var date = new Date();
+            $dateTo.aflButtonDatepicker(options).aflButtonDatepicker('setDate', date);
+            date.setMonth(date.getMonth() - 12);
+            $dateFrom.aflButtonDatepicker(options).aflButtonDatepicker('setDate', date);
+        }
+
+        function getDateLimit(elc, type) {
+            var cDate = elc.aflButtonDatepicker('option', type),
+                inst = $.aflButtonDatepicker.getInst(elc);
+            return $.datepicker._determineDate(inst, cDate, new Date());
+        }
+
+        function dateChanged($elem, default_date) {
+            var curDate = $elem.aflButtonDatepicker('getDate'),
+                mind = getDateLimit($elem, 'minDate'),
+                maxd = getDateLimit($elem, 'maxDate');
+
+            if (curDate == null) {
+                $elem.aflButtonDatepicker('setDate', default_date);
+            } else if (curDate < mind) {
+                $elem.aflButtonDatepicker('setDate', mind);
+            } else if (curDate > maxd) {
+                $elem.aflButtonDatepicker('setDate', maxd);
+            }
+        }
+
+        function initInterface() {
+            $('#tabs').tabs({
+                active: 0,
+                create: function(event, ui) {
+                    loadData(ui.panel);
+                },
+                beforeActivate: function(event, ui) {
+                    loadData(ui.newPanel);
+                }
+            }).removeClass('hidden');
+
+            $dateFrom.inputmask('dd.mm.yyyy', {placeholder: '_'});
+            $dateTo.inputmask('dd.mm.yyyy', {placeholder: '_'});
+
+            $dateFrom.on('change', function() {
+                var date = new Date();
+                date.setMonth(date.getMonth() - 12);
+                dateChanged($(this), date);
+            });
+
+            $dateTo.on('change', function() {
+                dateChanged($(this), new Date());
+            });
+
+            $('a.search-button').on('click', function(event) {
+                var $target = $(event.target),
+                    $tab = $target.closest('.ui-tabs-panel');
+                loadData($tab, true);
+            });
+
+            $('a.reset-button').on('click', function(event) {
+                initDates();
+                var $target = $(event.target),
+                    $tab = $target.closest('.ui-tabs-panel');
+                loadData($tab, true);
+            });
+        }
+
+        $(function() {
+            initDates();
+            initInterface();
+        });
+    })();
+</script>
+
+                </div>
+            </div>
+        </div>
+
+                
+        <div class="clear0"></div>
+    </div>
+
+                        <!-- [template_mod: "esi"] -->        <!-- rUnversioned directory 2017-10-09 16:06:14 -->
+
+
+
+<div class="clear0"></div><div class="block-banner"><div class="fl-down" data-ratio="0.22" data-img-src="//www.aeroflot.ru/cms/sites/all/themes/aeroflot/common/images/banners/footer_en.jpg" data-img-alt="Special Offers" data-a-href="//www.aeroflot.ru/cms/en/special_offers/" style="height: 297.22px;"><a href="https://www.aeroflot.ru/cms/en/special_offers/" style="width: 1351px; height: 297px;"><img src="./aeroflot_files/footer_en.jpg" alt="Special Offers" style="width: 1351px; height: 297px;"></a></div></div><div class="main-footer" role="contentinfo"><div class="footer"><span class="row printable contact-row"><div class="header">Contacts</div><div class="phones"><span class="ph_office case-upper">Moscow</span>&nbsp;<a href="tel:+74952235555" class="comment">+7-495-223-55-55</a><br><span class="mar case-upper">Russia</span>&nbsp;
+                
+                    <a href="tel:88004445555" class="comment">8-800-444-55-55</a>&nbsp;<span>(free from RF)</span><br><span class="ph_office case-upper">Russia</span>&nbsp;<a href="tel:*555" class="comment">*555</a>&nbsp;<span>MTS, Beeline, Megafon, Tele2</span><br><span class="mar_2">(free from RF)</span><br><span class="ph_office"></span>&nbsp;<span class="comment noprintable"><a href="https://www.aeroflot.ru/ru-en/offices/free_numbers" target="_blank">Toll free numbers from other regions</a></span></div><br><a id="cbx_footer" href="https://www.aeroflot.ru/personal/activity#" title="Details" class="cboxElement">Call</a></span><span class="row noprintable"><div class="header"><a href="https://www.aeroflot.ru/ru-en/about/aeroflot_social">Aeroflot in social networks</a></div><p class="social_icons"><a href="https://www.facebook.com/aeroflotinternational" rel="nofollow" target="_blank"><img src="./aeroflot_files/social__fb.svg" alt="Facebook"></a><a href="https://www.instagram.com/aeroflot" rel="nofollow" target="_blank"><img src="./aeroflot_files/social__instagram.svg" alt="Instagram"></a><a href="https://twitter.com/aeroflot" rel="nofollow" target="_blank"><img src="./aeroflot_files/social__twitter.svg" alt="Twitter"></a><a href="http://www.youtube.com/user/AeroflotRussia/videos" rel="nofollow" target="_blank"><img src="./aeroflot_files/social__youtube.svg" alt="YouTube"></a></p><ul><li class="mob"><a rel="nofollow" href="https://m.aeroflot.ru/ru-en">Mobile web-site</a></li><li class="mob"><a href="https://www.aeroflot.ru/ru-en/online_services/mobile_app">Mobile Apps</a></li><li class="mob"><a href="https://www.aeroflot.ru/ru-en/about">Company</a></li></ul></span><span class="row noprintable"><div class="header">For customers</div><ul><li><a href="https://www.aeroflot.ru/ru-en/online_registration">Check-in</a></li><li><a href="http://onlineboard.aeroflot.ru/en" rel="nofollow" target="_blank">Online timetable</a></li><li><a href="https://www.aeroflot.ru/schedule/schedule?_preferredLanguage=en">Schedule</a></li><li><a href="https://www.aeroflot.ru/ru-en/sitemap">Site map</a></li><li><a id="cbx_booking_common_1" title="Privacy Policy" href="https://www.aeroflot.ru/ru-en/booking/privacy_policy" data-colorbox-uri="/ru-en/booking/privacy_policy?hideTitle=1 .content" class="cboxElement">Privacy Policy</a></li></ul></span><span class="row noprintable"><div class="header">For partners</div><p class="agents_entrance"><a href="https://www.aeroflot.ru/ru-en/company/for_agents">For agents</a></p><p id="cargo_trans"><a href="https://www.aeroflot.ru/ru-en/cargo_transport">Cargo</a></p><p id="afl_group"><a href="https://www.aeroflot.ru/ru-en/about/subsidiaries">Aeroflot Group</a></p><p class="agents_entrance"><a href="http://ir.aeroflot.com/" rel="nofollow" target="_blank">Investor Relations</a></p><p id="skyteam_info"><a href="https://www.aeroflot.ru/ru-en/about/skyteam_alliance">SkyTeam</a></p></span></div><p class="cop noprintable">© Aeroflot 2008-2017</p><div style="display: none;"><div id="call_form"><div><p class="freecall_header">
+                    For free calls to the contact center, connect the headphones and the microphone to your computer.
+                </p><p>Contact Center operates around the clock.</p><div class="callbuttons"><object height="180" width="300"><noembed>To contact our call-center free of charge from the web-site you need to install Adobe Flash Player or use one of our free numbers</noembed><param name="" value="//www.aeroflot.ru/static/common_tpl/swf/en/dstar-aero.swf"><embed src="//www.aeroflot.ru/static/common_tpl/swf/en/dstar-aero.swf" height="180" width="300"></object></div></div></div></div></div><script type="text/javascript" src="./aeroflot_files/djcms.vars.js"></script>
+    
+            <script type="text/javascript">
+            $(function() {
+                var Menu = window['Menu'],
+                    Header = window['Header'],
+                    Footer = window['Footer'],
+                    Layout = window['Layout'];
+
+                Menu && Menu.init({
+                    skipTopMenuFirstItem: true,
+                    activeItemIdx: 4
+                });
+
+                Header && Header.init({
+                    languageCookieName: 'AF_preferredLanguage',
+                    allowedLanguages: ['ru', 'en']
+                });
+
+                Footer && Footer.init({});
+
+                Layout && Layout.init({
+                    languageCookieName: 'AF_preferredLanguage',
+                    topMenuDelay: 0,
+                    skipTopMenuFirstItem: true
+                });
+            });
+        </script>
+    <script type="text/javascript">var _cf = _cf || []; _cf.push(['_setBm', true]);</script><script type="text/javascript" src="./aeroflot_files/async.js"></script>
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9" selected="selected">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select><select class="ui-datepicker-year" data-handler="selectYear" data-event="change"><option value="2017">2017</option><option value="2016" selected="selected">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option></select></div></div><table class="ui-datepicker-calendar"><thead><tr><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">26</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">27</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">30</span></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">1</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">2</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">8</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">9</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">15</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">16</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">22</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">23</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">29</a></td><td class=" ui-datepicker-week-end  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default ui-state-active" href="https://www.aeroflot.ru/personal/activity#">30</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="9" data-year="2016"><a class="ui-state-default" href="https://www.aeroflot.ru/personal/activity#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td></tr></tbody></table></div><div><div style="behavior:url(#default#clientCaps)" id="oClientCaps"></div></div>
+<script type="text/javascript" id="">(function(b,c,a){(c[a]=c[a]||[]).push(function(){try{c.yaCounter12084547=new Ya.Metrika({id:12084547,webvisor:!0,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,params:window.yaParams||{}})}catch(a){}});var e=b.getElementsByTagName("script")[0],d=b.createElement("script");a=function(){e.parentNode.insertBefore(d,e)};d.type="text/javascript";d.async=!0;d.src=("https:"==b.location.protocol?"https:":"http:")+"//mc.yandex.ru/metrika/watch.js";"[object Opera]"==c.opera?b.addEventListener("DOMContentLoaded",
+a,!1):a()})(document,window,"yandex_metrika_callbacks");</script>
+<noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/12084547" style="position:absolute; left:-9999px;" alt=""&gt;&lt;/div&gt;</noscript>
+<script type="text/javascript" id="">"gtm.js"==google_tag_manager["GTM-5ZKPBX"].macro('gtm6')?change("#select-language","change","changeLanguage","lang"):(set("Islang","changeLanguage"),set("FFPLoggedIn","UserLoggedIn"),set("FFPFields","FFPFields"));
+function set(a,b){getCookie(a)||("WL.ibeData_loaded"==google_tag_manager["GTM-5ZKPBX"].macro('gtm7')&&("changeLanguage"==b?void 0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm8')&&0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm9')&&(setCookie(a,"true","1"),dataLayerSU.push({event:b,lang:google_tag_manager["GTM-5ZKPBX"].macro('gtm10')})):"changeCurrency"==b&&void 0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm11')&&0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm12')&&(setCookie(a,"true","1"),dataLayerSU.push({event:b,"\u0441urr":google_tag_manager["GTM-5ZKPBX"].macro('gtm13')}))),"WL.ibeData_changed"==google_tag_manager["GTM-5ZKPBX"].macro('gtm14')&&("UserLoggedIn"==b?void 0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm15')&&0!=
+google_tag_manager["GTM-5ZKPBX"].macro('gtm16')&&(setCookie(a,"true","1"),dataLayerSU.push({event:b,"account number":google_tag_manager["GTM-5ZKPBX"].macro('gtm17')})):"FFPFields"==b&&void 0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm18')&&0!=google_tag_manager["GTM-5ZKPBX"].macro('gtm19')&&(setCookie(a,"true","1"),dataLayerSU.push({event:b,"account number Fields":google_tag_manager["GTM-5ZKPBX"].macro('gtm20')}))))}function change(a,b,d,c){$(a).on(b,{event:d,nEvent:c},myHandle)}
+function myHandle(a){"lang"==a.data.nEvent?dataLayerSU.push({event:a.data.event,lang:$(this).val()}):dataLayerSU.push({event:a.data.event,"\u0441urr":$(this).val()})}function setCookie(a,b,d){var c=new Date;c.setTime(c.getTime()+864E5*d);d="expires\x3d"+c.toUTCString();document.cookie=a+"\x3d"+b+"; "+d}
+function getCookie(a){a+="\x3d";for(var b=document.cookie.split(";"),d=0;d<b.length;d++){for(var c=b[d];" "==c.charAt(0);)c=c.substring(1);if(0==c.indexOf(a))return c.substring(a.length,c.length)}return""};</script><script type="text/javascript" id="">$("select#id_loyalty_program").change(function(a){a=$("select#id_loyalty_program option:selected").text();window.dataLayerSU.push({event:"OCP",program_with_form_change:a})});</script><div style="display: none; visibility: hidden;"><script>ga("create","UA-25816578-1","auto",{name:"Aeroflot_ru_sendDestination"});searchFrom=document.querySelectorAll('input[name*\x3d"ori"], input[name*\x3d"depart"]');searchTo=document.querySelectorAll('input[name*\x3d"dest"], input[name*\x3d"arriv"], input[name*\x3d"return"]');for(var i=0;i<searchFrom.length;i++)addEvent(searchFrom[i],"focusout",sendFlightFrom),console.log("Listener added: From"+i);
+for(i=0;i<searchTo.length;i++)addEvent(searchTo[i],"focusout",sendFlightTo),console.log("Listener added: To"+i);function addEvent(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}
+function sendFlightFrom(){str=event.currentTarget.parentNode.parentNode.querySelectorAll('input[type\x3d"hidden"][name*\x3d"ori"], input[type\x3d"hidden"][name*\x3d"depart"]');dest=str[0].value;console.log(dest);null!=str&&""!=str&&(ga(function(){var a=ga.getByName("Aeroflot_ru_sendDestination").get("clientId");ga("Aeroflot_ru_sendDestination.set",{dimension87:dest,dimension89:a})}),ga("Aeroflot_ru_sendDestination.send","event","appcraft: user","typed in search form flight_from: "+dest,"on page URL: "+
+window.location.href))}
+function sendFlightTo(){str=event.currentTarget.parentNode.parentNode.querySelectorAll('input[type\x3d"hidden"][name*\x3d"dest"], input[type\x3d"hidden"][name*\x3d"arriv"], input[type\x3d"hidden"][name*\x3d"return"]');dest=str[0].value;console.log(dest);null!=str&&""!=str&&(ga(function(){var a=ga.getByName("Aeroflot_ru_sendDestination").get("clientId");ga("Aeroflot_ru_sendDestination.set",{dimension88:dest,dimension89:a})}),ga("Aeroflot_ru_sendDestination.send","event","appcraft: user","typed in search form flight_to: "+
+dest,"on page URL: "+window.location.href))};</script></div><div style="display: none; visibility: hidden;">
+ <script type="text/javascript">var axel=Math.random()+"",a=1E13*axel;document.write('\x3cimg src\x3d"https://ad.doubleclick.net/ddm/activity/src\x3d6257145;type\x3dgfnyj0;cat\x3dall_s0;u7\x3d1967236557.1509313828;dc_lat\x3d;dc_rdid\x3d;tag_for_child_directed_treatment\x3d;ord\x3d'+a+'?" width\x3d"1" height\x3d"1" alt\x3d""/\x3e');</script><img src="./aeroflot_files/src=6257145" width="1" height="1" alt="">
+ <noscript></noscript> </div><div style="display: none; visibility: hidden;"><script type="text/javascript">(window.Image?new Image:document.createElement("img")).src=location.protocol+"//vk.com/rtrg?r\x3djfCLOMfwMxc79uHuFZypWxAJddmdrgUrMnAazFQbw7*nJv6Nh3/nJY7gy9KwDzjsYpma8X8tcKcdgebRM66Gfs1iE284yA9f9BHrKi/W3ffjZ6zIy94/y6U*77XRi3DeRI9CEOyOwJxJ/rjyZJQG1uAMUMKqUHrywz7JI1ap1Qo-\x26pixel_id\x3d1000096233";</script></div></body><iframe style="position: absolute; left: -100em; top: -100em; width: 10px; height: 10px;" src="./aeroflot_files/saved_resource.html"></iframe></html>

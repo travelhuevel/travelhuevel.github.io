@@ -1,0 +1,113 @@
+div.content{
+    -moz-box-shadow:    0 2px 1px #333333;
+    -webkit-box-shadow: 0 2px 1px #333333;
+    box-shadow:         0 2px 1px #333333;
+}
+
+input, select, textarea, button.button, span.button a, fieldset,
+table.list, span.up-button a, .readonly_field{
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    -khtml-border-radius:  3px;
+    -o-border-radius:      3px;
+    border-radius:         3px;
+}
+
+span.button a, input.button.inactive, button.button.inactive,
+span.button.inactive a, input.button.gray, button.button.gray{
+	background: #ededed url('../images/bg_gray.svg'); /* IE9 */
+    background: -moz-linear-gradient(top, #ededed 0%, #c2c2c2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#c2c2c2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ededed 0%,#c2c2c2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ededed 0%,#c2c2c2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ededed 0%,#c2c2c2 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ededed 0%,#c2c2c2 100%); /* W3C */
+}
+
+input.button, button.button, span.button.active a{
+	background: #ffb200 url('../images/bg_orange.svg'); /* IE9 */
+    background: -moz-linear-gradient(top, #ffb200 0%, #ff8100 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb200), color-stop(100%,#ff8100)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffb200 0%,#ff8100 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffb200 0%,#ff8100 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffb200 0%,#ff8100 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffb200 0%,#ff8100 100%); /* W3C */
+}
+
+input.button, button.button, span.button.active a{
+    text-shadow: 0 1px 1px #ffbe66;
+}
+
+input.button.inactive, button.button.inactive, input.button.gray, span.button a{
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+
+
+input.button.inactive, button.button.inactive{
+    text-shadow: none;
+}
+input.button:focus {
+	outline: 1px dotted black;
+}
+input.button:active {
+	outline: 1px dotted black;
+}
+
+fieldset legend, h4.legend, table.list th, b.code, strong.code {
+	background:  #0189dd url('../images/bg_blue.svg'); /* IE9 */
+    background: -moz-linear-gradient(top, #0189dd 0%, #2989d8 50%, #207cca 51%, #064a8a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0189dd), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#064a8a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0189dd 0%,#2989d8 50%,#207cca 51%,#064a8a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0189dd 0%,#2989d8 50%,#207cca 51%,#064a8a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0189dd 0%,#2989d8 50%,#207cca 51%,#064a8a 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #0189dd 0%,#2989d8 50%,#207cca 51%,#064a8a 100%); /* W3C */
+    text-shadow: #15335d 1px 1px 1px;
+}
+
+fieldset legend{
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -khtml-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+table.list th:first-child{
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    -khtml-border-radius: 5px 0 0 0;
+    -o-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+}
+
+table.list th:last-child, table.list th.last-child{
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    -khtml-border-radius: 0 5px 0 0;
+    -o-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+table.list caption{
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5%;
+}
+
+div.message, b.code, strong.code{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+tr.shadow > td{
+    -moz-box-shadow:    0 2px 3px #cccccc inset;
+    -webkit-box-shadow: 0 2px 3px #cccccc inset;
+    box-shadow:         0 2px 3px #cccccc inset;
+}
+
+/* выравнивание размеров input разных типов */
+input::-moz-focus-inner {
+    border: 0;
+}

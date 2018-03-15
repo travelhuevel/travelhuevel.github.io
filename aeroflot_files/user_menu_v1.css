@@ -1,0 +1,652 @@
+div.user-menu{
+    color: #666666;
+    background-color: #B5BDC6;
+    padding: 2em;
+    min-height: 162px;
+    max-width: 1300px;
+}
+
+div.user-menu-container{
+    max-width: 75em;
+}
+
+div.user-menu-container .top-row {
+    display: table;
+    width: 100%;
+}
+
+div.user-menu h1{
+    font-weight: normal;
+    padding-bottom: 0.5em;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+div.user-menu ul.menu li{
+    display: inline-block;
+    *display: inline;
+    margin: 0.2em 0.2em 0.2em 0;
+    list-style: none;
+    list-style-type: none;
+}
+
+div.user-menu ul.menu li a{
+    color: #666666;
+    display: inline-block;
+    width: 14em;
+    *width: 14em;
+    background-color: #E9E9E9;
+    padding: 0.5em;
+    border: 1px solid #a0a0a0;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+    text-overflow: ellipsis;
+}
+
+div.user-menu ul.menu li.hint-button a{
+    text-overflow: clip;
+}
+
+div.user-menu ul.menu li a:hover,
+div.user-menu ul.menu li a:focus{
+    color: #E9E9E9;
+    background-color: #666666;
+
+    -moz-box-shadow:    0 1px 2px #333333 inset;
+    -webkit-box-shadow: 0 1px 2px #333333 inset;
+    box-shadow:         0 1px 2px #333333 inset;
+}
+
+div.user-menu ul.menu{
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    max-width: 600px;
+}
+
+div.user-menu div.miles {
+    border: 0;
+    width: 46.5em;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #ffffff\0/;
+    margin-bottom: 1em;
+    padding: 0.5em 0;
+    font-family: sans-serif;
+    display: inline-block;
+}
+
+div.user-menu div.miles .progress{
+    padding: 0.08em;
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.miles_msg_row {
+    height: 18px;
+}
+
+#miles_msg {
+    font-weight: bold;
+}
+
+#busy_indicator {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url('images/busy5.gif');
+}
+
+.miles_sign {
+    display:inline-block;
+    background-image: url('images/miles_white.png');
+    background-repeat: no-repeat;
+    width: 31px;
+    height: 18px;
+    margin-left: 0.20em;
+}
+
+.miles_black {
+    background: url('images/miles_black.png') no-repeat center center;
+    background: url('images/miles_black.svg') no-repeat right center;
+    background-size: cover;
+    width: 19px;
+    height: 15px
+}
+
+#email_form{
+    padding: 1em;
+}
+
+/* BASIC TIER COLORS */
+
+div.user-menu.BASIC-tier-level #busy_indicator {
+    background-image: url('images/busy5_blue.gif');
+}
+
+div.user-menu.BASIC-tier-level div.miles {
+    background-color: #0f539c;
+}
+
+div.user-menu.BASIC-tier-level div.miles div.all {
+    border-right: 2px groove #3d75ae;
+}
+
+div.user-menu.BASIC-tier-level .progress .bar {
+    background-color: #023a73;
+    -webkit-box-shadow: 0 1px 2px #052653 inset;
+    -moz-box-shadow: 0 1px 2px #052653 inset;
+    box-shadow: 0 1px 2px #052653 inset;
+}
+
+div.user-menu.BASIC-tier-level .values .upgrade {
+    color: #2786b0;
+}
+
+/* SILVER TIER COLORS */
+
+div.user-menu.SILVER-tier-level .miles_sign {
+    background-image: url('images/miles_black.png');
+}
+
+div.user-menu.SILVER-tier-level div.miles div.all{
+    border-right: 2px groove #fff;
+}
+
+div.user-menu.SILVER-tier-level div.miles {
+    background-color: #dadada;
+}
+
+div.user-menu.SILVER-tier-level .progress .bar {
+    background-color: #878787;
+    -webkit-box-shadow: 0 1px 2px #767676 inset;
+    -moz-box-shadow: 0 1px 2px #767676 inset;
+    box-shadow: 0 1px 2px #767676 inset;
+}
+
+div.user-menu.SILVER-tier-level .values .upgrade {
+    color: #dadada;
+}
+
+/* GOLD TIER COLORS */
+
+div.user-menu.GOLD-tier-level .user-tool-menu a {
+    color: white;
+}
+
+div.user-menu.GOLD-tier-level .miles_sign {
+    background-image: url('images/miles_black.png');
+}
+
+div.user-menu.GOLD-tier-level div.miles div.all {
+    border-right: 2px groove #fff;
+}
+
+div.user-menu.GOLD-tier-level div.miles {
+    background-color: #fff;
+}
+
+div.user-menu.GOLD-tier-level .progress .bar {
+    background-color: #dbdcde;
+    -webkit-box-shadow: 0 1px 2px #d0d1d3 inset;
+    -moz-box-shadow: 0 1px 2px #d0d1d3 inset;
+    box-shadow: 0 1px 2px #d0d1d3 inset;
+}
+
+div.user-menu.GOLD-tier-level .values .upgrade {
+    color: #777;
+}
+
+div.user-menu.GOLD-tier-level h1 {
+    color: #555;
+}
+
+/* PLATINUM TIER COLORS */
+
+div.user-menu.PLATINUM-tier-level #busy_indicator {
+    background-image: url('images/busy5_blue.gif');
+}
+
+div.user-menu.PLATINUM-tier-level div.miles div.all {
+    border-right: 2px groove #666;
+}
+
+div.user-menu.PLATINUM-tier-level div.miles {
+    background-color: #444;
+}
+
+div.user-menu.PLATINUM-tier-level .progress .bar {
+    background-color: #2a2a2a;
+    -webkit-box-shadow: 0 1px 2px #111 inset;
+    -moz-box-shadow: 0 1px 2px #111 inset;
+    box-shadow: 0 1px 2px #111 inset;
+}
+
+div.user-menu.PLATINUM-tier-level .values .upgrade {
+    color: #888;
+}
+
+div.user-menu.PLATINUM-tier-level h1 {
+    color: #555;
+}
+
+div.user-menu div.miles div.div_row{
+    display: inline-block;
+}
+
+div.user-menu div.miles div.all.div_text{
+    font-size: 230%;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    -khtml-border-radius: 4px 0 0 4px;
+    -o-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    white-space: nowrap;
+    padding: 0.4em 0.5em;
+    min-width: 5em;
+    display: table;
+}
+
+div.user-menu div.miles div.row.text{
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* <Колонки Карточка участника> */
+div.left-column {
+  width: auto;
+  min-width: 170px;
+  padding: 0.1em 0;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+}
+
+div.right-column {
+  width: 100%;
+  vertical-align: top;
+  padding: 0 15px 0 5px;
+  display: table-cell;
+}
+/* </Колонки Карточка участника> ENDS */
+
+
+div.user-menu div.miles div.question {
+    text-align: right;
+}
+
+div.user-menu div.miles .progress .values span{
+    padding: 0 0.5em;
+}
+
+div.user-menu div.miles .progress .values .current  {
+    font-weight: bold;
+    color: #1D2E3B;
+}
+
+div.user-menu div.miles .progress .values .upgrade {
+    float: right;
+    font-weight: bold;
+}
+
+div.user-menu div.miles .progress .bar,
+div.user-menu div.miles .progress .bar .fill
+ {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+div.user-menu div.miles .progress .bar {
+    width: 100%;
+    position: relative;
+}
+
+div.user-menu div.miles .progress .bar .fill {
+    display: inline-block;
+    width: 0;
+}
+
+div.user-menu div.miles .progress .bar .values {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+#current_year_miles .fill {
+    background: #3892E7; /* Old browsers */
+    background: -moz-linear-gradient(left,  #3892E7 0%, #14cdff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3892E7), color-stop(100%,#14cdff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #3892E7 0%,#14cdff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #3892E7 0%,#14cdff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #3892E7 0%,#14cdff 100%); /* IE10+ */
+    background: linear-gradient(to right,  #3892E7 0%,#14cdff 100%); /* W3C */
+    filter: none;
+}
+
+#current_year_miles .current {color:#152029;}
+#current_year_miles .upgrade {color:#FFFFFF;}
+#current_year_segments .upgrade {color:#FFFFFF;}
+
+#current_year_segments .fill {
+    background: #eb8011; /* Old browsers */
+    background: -moz-linear-gradient(left,  #eb8011 0%, #fcbd12 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eb8011), color-stop(100%,#fcbd12)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #eb8011 0%,#fcbd12 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #eb8011 0%,#fcbd12 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #eb8011 0%,#fcbd12 100%); /* IE10+ */
+    background: linear-gradient(to right,  #eb8011 0%,#fcbd12 100%); /* W3C */
+    filter: none;
+}
+
+div.user-menu div.card{
+    float:right;
+    display: inline-block;
+    min-height: 162px;
+    min-width: 265px;
+
+    *height: 162px;
+    *width: 265px;
+
+    margin-left: -300px;
+    background-color: #666666;
+    z-index: 100001;
+}
+div.user-menu div.card a{
+    text-decoration: none;
+}
+
+div.user-menu .card .card_info {
+    padding: 75px 20px 20px 40px;
+    color: #ffffff;
+    text-shadow: #000000 1px 1px 1px;
+    letter-spacing: 0.2em;
+    width: 200px;
+}
+
+div.user-menu .card .card_info #member_loyalty_id {
+    display: block;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 1.4;
+}
+
+div.user-menu .card .card_info #user_display_name {
+    display: block;
+}
+
+div.user-menu .card .card_info #card_exp_date {
+    font-size: 80%;
+    letter-spacing: normal;
+}
+
+div.user-menu ul.user-tool-menu{
+    display: block;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+div.user-menu ul.user-tool-menu li{
+    display: inline-block;
+    *display: inline;
+    padding: 0.5em;
+}
+
+div.user-menu ul.user-tool-menu li a{
+    color: #666666;
+    text-decoration: none;
+    padding: 0.5em 0em;
+    padding-right: 24px;
+}
+div.user-menu ul.user-tool-menu-bottom{
+    margin-top: 142px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+
+div.user-menu ul.user-tool-menu li a.profile{
+    background: url("images/menu/white_gears.png") no-repeat scroll right center;
+}
+div.user-menu ul.user-tool-menu li a.print{
+    background: url("images/menu/white_print.png") no-repeat scroll right center; /* иконка для распечатки */
+}
+div.user-menu ul.user-tool-menu li a.passbook{
+    background: url("images/menu/passbook.png") no-repeat scroll right center; /* иконка для распечатки */
+}
+
+
+div.user-menu ul.user-tool-menu li a.print, div.user-menu ul.user-tool-menu li a.passbook{
+    display: block;
+}
+
+body.turned-off div.user-menu span.menu-btn,
+div.user-menu span.menu-btn {
+    background: #eee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eee 0%, #aaa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eee), color-stop(100%,#aaa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eee 0%,#aaa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eee 0%,#aaa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eee 0%,#aaa 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #eee 0%,#aaa 100%); /* W3C */
+    border: 1px solid #a0a0a0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    color: #aaa;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    min-width: 14em;
+    padding: 0.5em;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+    text-overflow: ellipsis;
+}
+body.turned-off div.user-menu span.menu-btn:hover {
+    -webkit-box-shadow: 0 1px 2px #333 inset;
+    -moz-box-shadow: 0 1px 2px #333 inset;
+    box-shadow: 0 1px 2px #aaa inset;
+}
+
+div.user-menu.BASIC-tier-level ul.user-tool-menu li a, div.user-menu.PLATINUM-tier-level ul.user-tool-menu li a{
+    color: #ffffff;
+}
+
+
+div.user-menu.PLATINUM-tier-level{
+    background: url("images/menu/platinum2_400.jpg") no-repeat scroll left center #05090d;
+    *background: #05090d;
+    color: white;
+}
+div.user-menu.PLATINUM-tier-level div.card{
+    background: url("images/menu/card_platinum_v2.png") no-repeat scroll center center;
+}
+
+
+div.user-menu.GOLD-tier-level{
+    background: url("images/menu/gold_400.jpg") no-repeat scroll left center #c4a644;
+    *background: #c4a644;
+}
+div.user-menu.GOLD-tier-level div.card{
+    background: url("images/menu/card_gold_v2.png") no-repeat scroll center center;
+}
+
+div.user-menu.SILVER-tier-level{
+    background: url("images/menu/silver_400.jpg") no-repeat scroll left center #eaeaea;
+    *background: #eaeaea;
+}
+div.user-menu.SILVER-tier-level div.card{
+    background: url("images/menu/card_silver_v2.png") no-repeat scroll center center;
+}
+
+div.user-menu.BASIC-tier-level{
+    background: url("images/menu/base_400.jpg") no-repeat scroll left center #023165;
+    *background: #023165;
+    color: white;
+}
+div.user-menu.BASIC-tier-level div.card{
+    background: url("images/menu/card_base_v2.png") no-repeat scroll center center ;
+}
+
+div.user-menu.BASIC-tier-level h1, div.user-menu.PLATINUM-tier-level h1{
+    color: #ffffff;
+    text-shadow: 0 1px 1px #333333;
+}
+
+div.user-menu ul.menu li a{
+    background: #d3d3d3 url('images/bg.svg'); /* IE9 */
+    background: -moz-linear-gradient(top, #ffffff 0%, #d3d3d3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d3d3d3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#d3d3d3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#d3d3d3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#d3d3d3 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#d3d3d3 100%); /* W3C */
+    color: #444;
+}
+
+div.user-menu ul.menu li a:hover,
+div.user-menu ul.menu li a:focus {
+    background: rgba(104,104,104, 0.75); /* Old browsers */
+}
+
+div.admin-menu {
+    max-width: 100%;
+    padding: 0;
+    background-color: #eee;
+    overflow:hidden;
+    min-height: auto;
+}
+
+.admin-role-menu #loaded_menu_content {
+    max-width: 100%;
+}
+
+.admin-role-menu #loaded_menu_content.loading .loading_message {
+    height: 40px;
+    margin: 0;
+    font-size: 17px;
+    background-color: #eee;
+}
+
+.admin-role-menu #loaded_menu_content .admin-menu {
+    height: 40px;
+}
+
+div.admin-menu li {
+    display: inline-block;
+}
+
+div.admin-menu ul.menu.column:first-child {
+    margin-left: 0;
+}
+
+div.admin-menu ul.menu.column {
+    float: left;
+    padding: 0;
+    margin: 0 0 0 2em;
+}
+
+div.admin-menu ul.menu.column li {
+    list-style: none;
+    background: none;
+    padding: 0;
+    margin: .5em;
+    display: block;
+    line-height: 15px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+div.admin-menu ul.menu.column li a {
+    width: 100%;
+    padding: 0px 5px;
+    text-align: left;
+}
+
+div.admin-submenu {
+    float: left;
+    width:100%;
+    background-color: #B5BDC6;
+}
+div.admin-submenu ul.menu.column li {
+    margin: 5px;
+}
+
+
+.feedback_link_container, .fellow_travellers_link_container {
+    position: relative;
+    display: inline-block;
+}
+
+.feedback_label_container, .fellow_travellers_label_container {
+    position: relative;
+    display: inline-block;
+    width: 14em;
+    overflow: hidden;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.feedback_count_container, .fellow_travellers_notify_container {
+    position: absolute;
+    display: none;
+    top: -2px;
+    left: 10em;
+}
+
+.fellow_travellers_notify_container.has_data {
+    display: block;
+}
+
+.feedback_link_container.success .feedback_label_container {
+    width: 10em;
+}
+
+.feedback_mail, .fellow_traveller_notifier {
+    height: 24px;
+    bottom: 0.1em;
+    position: relative;
+}
+
+.requests_count, .invitations_number {
+    //color: #ffa500;
+    //margin-left: 60px;
+    background: #FF8500;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    min-width: 1.5em;
+    font-size: 0.95em;
+    position: relative;
+    display: inline-block;
+    bottom: 0.80em;
+    // тени
+    //-webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    //-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    //box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+

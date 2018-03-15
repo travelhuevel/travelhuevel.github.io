@@ -1,0 +1,323 @@
+div.main-header {
+    padding: 2em;
+    vertical-align: top;
+}
+
+div.main-header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+div.main-header,
+div.main-header a {
+    color: #ffffff;
+}
+
+div.main-header {
+    height: 80px;
+    background: url("images/wing_header.jpg") no-repeat scroll right top;
+}
+
+div.main-header a.logo {
+    float: left;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+div.main-header a,
+div.language-selector2 {
+    float: right;
+    color: #02458D;
+    display: block;
+    position: relative;
+    zoom: 1;
+}
+div.language-selector2:focus {
+ 	outline-color: #000;
+ 	outline-style: dotted;
+ 	outline-width: 1px;
+}
+
+div.language-selector2 {
+    width: 47px;
+    height: 37px;
+    cursor: pointer;
+}
+
+div.language-selector2.menu-btn {
+    height: 0;
+    width: auto !important;
+}
+
+/* For language-only chooser */
+div.language-selector2 > img {
+    position: absolute;
+}
+
+div.language-selector2.language-only-selector div {
+    position: absolute;
+    z-index: 2000;
+    width: 39px;
+    margin: 33px 2px 0 2px;
+    padding: 2px 0;
+    background-color: #3369a8;
+    border: 2px solid #1E64A9;
+}
+
+div.language-selector2.language-only-selector a {
+    float: none;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 2px 0;
+}
+
+/* For locale-language chooser */
+span.current-locale-lang img {
+	margin: 0 3px -3px 1px;
+}
+div.language-selector2 > div.locale-lang-button {
+  margin-right: -6px;
+}
+
+div.locale-with-language-selector {
+    position: absolute;
+    z-index: 2000;
+    border-radius: 5px;
+    width: 290px;
+    height: 415px;
+    margin: 1px 2px 0 2px;
+    right: 29px;
+    top: 30px;
+    padding: 2px 0;
+    background-color: #3369a8;
+    border: 2px solid #1E64A9;
+    text-align: center;
+    color:#ffffff;
+}
+
+div.locale-with-language-selector span.current-locale-lang:after,
+div.language-selector2 div.locale-lang-button:after
+{
+  content: "\25BE";
+  padding:0 2px;
+}
+
+div.locale-with-language-selector span {
+	  text-align: center;
+    display: block;
+}
+
+div.locale-with-language-selector > span {
+    text-align: right;
+    display: block;
+	margin: 0 2px 0 0;
+}
+
+div.locale-with-language-selector div.choose-country select,
+div.locale-with-language-selector div.choose-language select {
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 7px;
+    height: 314px;;
+}
+
+div.locale-with-language-selector div.choose-country,
+div.locale-with-language-selector div.choose-language {
+    margin-top: 10px;
+    float: left;
+}
+
+div.locale-with-language-selector div.choose-country > select {width: 170px;}
+div.locale-with-language-selector div.choose-language > select {width: 90px;}
+
+div.locale-with-language-selector option {
+    float: none;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px;
+}
+
+div.locale-with-language-selector:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#set_lang_locale {
+    float: right;
+    margin-right: 16px !important;
+    width: 46px;
+}
+
+div.locale-with-language-selector {
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    -khtml-border-radius:  3px;
+    -o-border-radius:      3px;
+    border-radius:         3px;
+}
+
+/* -------------------------------- */
+
+div.header-print-only {
+    display: none;
+}
+
+.select-no-scroll::-webkit-scrollbar {display:none;}
+.select-no-scroll::-moz-scrollbar {display:none;}
+.select-no-scroll::-o-scrollbar {display:none;}
+.select-no-scroll::-google-ms-scrollbar {display:none;}
+.select-no-scroll::-khtml-scrollbar {display:none;}
+
+/* start #1662 */
+div.main-header a.menu-btn, div.main-header div.menu-btn {
+    background: linear-gradient(to bottom, #608EC0 0%, #03438F 100%);
+    color: #FFF;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    padding: 0.40em 1em 0.33em 1em;
+    border: 2.2px solid #0D4E98;
+    text-decoration: none;
+    font-size: 11px;
+    margin: 0.43em;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    min-height: 18px;
+    min-width: 12px;
+}
+
+div.main-header a.menu-btn.login-icon {
+    padding-right: 2.5em;
+}
+
+div.main-header a.menu-btn span {
+    position: absolute;
+    background: url("images/h_sprite.png") no-repeat;
+}
+
+div.main-header a.menu-btn.login-icon span {
+    background-position: 0 0;
+    width: 7px;
+    height: 11px;
+    right: 11px;
+    top: 7px;
+}
+
+div.main-header a.menu-btn.home-icon span {
+    background-position: -8px 0;
+    width: 10px;
+    height: 11px;
+    right: 50%;
+    margin-right: -5px;
+    top: 7px;
+}
+
+div.main-header a.menu-btn.map-icon span {
+    background-position: -20px 0;
+    width: 11px;
+    height: 11px;
+    right: 50%;
+    margin-right: -5.5px;
+    top: 7px;
+}
+
+div.main-header a.menu-btn.search-icon span {
+    background-position: -32px 0;
+    width: 9px;
+    height: 11px;
+    right: 50%;
+    margin-right: -4.5px;
+    top: 7px;
+}
+
+div.main-header a.orange {
+    background: linear-gradient(to bottom, #FFC612 0%,#E66D11 100%);
+}
+
+div.language-selector2 {
+    margin-top: 1px;
+    margin-left: 3px;
+}
+/* end #1662 */
+
+.page-type-front div.main-header .home-page-link {
+    display: none;
+}
+
+div#topmenu li ul {
+  z-index: 2000;
+}
+
+/* 2016-09-15 */
+#locale {
+        min-width:178px;
+}
+
+#lang {
+    min-width:80px;
+}
+
+.select-locale-lang {
+    background-color: #608cbd;
+    margin:10px 0 10px 10px;
+    min-height:350px;
+}
+
+.select-locale-lang ul li {
+    padding: 5px;
+    font-size: 13px;
+}
+
+.select-locale-lang ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.select-locale-lang ul li {
+    text-align: left;
+    display:block;
+    border-left: 5px solid transparent;
+}
+
+.select-locale-lang ul > li.selected {
+  background: #efefef;
+  color: #02458D;
+}
+
+.select-locale-lang ul li:focus {
+    background-color: #efefef;
+    color: #02458D;
+    border-left: 5px solid #ff7b00;
+}
+
+div.locale-with-language-selector {
+    height: 460px;
+}
+
+#locale ul li img {
+    width: 20px;
+    height: 14px;
+    padding: 2px;
+}
+
+#header-menu .menu-btn:hover, #header-menu .menu-btn:focus {
+    border: 2px solid #7aaee8;
+}
+
+div.main-header a.logo {
+    outline: 0;
+}
+div.main-header a.logo.focus {
+    border: 2px solid #7aaee8;
+}
+div.main-header a.logo:hover {
+    border: 2px solid transparent;
+}

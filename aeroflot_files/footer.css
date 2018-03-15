@@ -1,0 +1,236 @@
+div.main-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2em;
+    vertical-align: top;
+}
+
+.page-type-front_bonus div.main-footer {
+    border-top: 3px solid #FF8100;
+}
+
+div.main-footer .footer h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 0.8em;
+    color: #fff;
+}
+div.main-footer .footer div.header {
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 0.8em;
+    text-transform: uppercase;
+}
+
+div.main-footer .footer td {
+    vertical-align: top;
+    padding-left: 20px;
+    border-left: 1px solid #4174aa;
+    text-align: left;
+}
+
+div.main-footer .footer td:first-child {
+    padding-left: 0px;
+    border-left: none;
+}
+
+div.main-footer,
+div.main-footer a {
+    color: #ffffff;
+}
+
+div.main-footer .footer .phones {
+    padding-bottom: 0.5em;
+    line-height: 1.6em;
+}
+
+div.main-footer .footer .phones span {
+    color: #f88733;
+    padding: 0.2em 0;
+}
+
+div.main-footer .footer .phones span.comment {
+    color: #ffffff;
+}
+
+div.main-footer .footer .phones span.ph_office {
+    background: url("images/ico_tel.gif") no-repeat left center;
+}
+
+div.main-footer .footer .phones span.ph_office,
+div.main-footer .footer .phones span.mar {
+    padding-left: 20px;
+}
+div.main-footer .footer .case-upper {
+    text-transform: uppercase;
+}
+div.main-footer .footer .phones span.mar_2 {
+    padding-left: 105px;
+}
+
+div.main-footer .footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+div.main-footer .footer ul li {
+    background: url("images/aero_arrow.gif") left center no-repeat;
+    padding: 0.3em 1em;
+    list-style: none;
+}
+
+div.main-footer .footer li.mob a {
+    color: #FFB20D;
+    font-weight: bold;
+}
+
+div.main-footer .footer p {
+    padding: 0.6em;
+    margin: 0;
+    padding-left: 3em;
+}
+
+div.main-footer .footer p#corporate_entrance {
+    background: url("images/corps.jpg") left center no-repeat;
+}
+
+div.main-footer .footer p#agents_entrance {
+    background: url("images/agents.gif") left center no-repeat;
+}
+
+div.main-footer .footer p#cargo_trans {
+    background: url("images/gruz.gif") left center no-repeat;
+}
+
+div.main-footer .footer p#afl_group {
+    background: url("images/afl_group.jpg") left center no-repeat;
+}
+
+div.main-footer .footer p#skyteam_info {
+    background: url("images/agents.gif") left center no-repeat;
+}
+
+div.main-footer .footer p.ph_rss {
+    background: url("images/rss.gif") no-repeat 10px center;
+}
+
+div.main-footer .footer p.social_icons {
+    padding-left: 0;
+}
+
+div.main-footer .footer p.social_icons a {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+div.main-footer .footer p.social_icons img {
+    display: block;
+    border: none;
+    width: 24px;
+    height: 20px;
+    margin-right: 5px;
+    opacity: 0.9;
+}
+
+div.main-footer .cop {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+div.main-footer #cbx_footer {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #ffc612 0%, #e66d11 100%) repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+div.main-footer #cbx_footer img {
+    display: block;
+    border: none;
+}
+
+#call_form {
+    padding: 6px
+}
+
+#call_form p {
+    padding: 0!important;
+    margin: 5px 0;
+}
+
+.freecall_header {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px 0
+}
+
+.callbuttons {
+    text-align: center;
+    width: 100%;
+    height: 180px;
+}
+
+
+/* #1666 */
+div.main-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 96%;
+    display: table;
+}
+
+div.main-footer .footer {
+    white-space: nowrap;
+    display: table-row;
+}
+
+div.main-footer .footer div.header {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding-bottom: 0.8em;
+}
+
+div.main-footer .footer span.row{
+    vertical-align: top;
+    border-left: 1px solid #4174aa;
+    text-align: left;
+    height: 16em;
+    width: 23%;
+    display: table-cell;
+    padding: 0 10px;
+}
+
+div.main-footer .footer span:first-child
+ { padding-left: 0px; border-left: none; }
+
+div.main-footer .footer .phones { padding-bottom: 0.5em; line-height: 1.6em; }
+div.main-footer .footer .phones span { color: #f88733; padding: 0.2em 0; }
+div.main-footer .footer .phones span.comment { color: #ffffff; }
+div.main-footer .footer .phones span.ph_office { background: url(//www.aeroflot.ru/cms/sites/all/themes/aeroflot/images/ico_tel.gif) no-repeat left center; }
+div.main-footer .footer .phones span.ph_office,
+div.main-footer .footer .phones span.mar {  padding-left: 20px; }
+
+div.main-footer .footer ul { margin: 0; padding: 0; }
+div.main-footer .footer ul li {
+    background: url(//www.aeroflot.ru/cms/sites/all/themes/aeroflot/media/img/aero_arrow.gif) left center no-repeat;
+    padding: 0.3em 1em;
+    list-style: none;
+}
+div.main-footer .footer li.mob a { color: #FFB20D; font-weight: bold; }
+
+div.main-footer .footer p{ padding: 0.6em; margin: 0; padding-left: 3em; } 
+div.main-footer .footer p#corporate_entrance { background: url(//www.aeroflot.ru/cms/sites/all/themes/aeroflot/media/img/corps.jpg) left center no-repeat; }
+div.main-footer .footer p#agents_entrance, div.main-footer .footer p.agents_entrance { background: url(//www.aeroflot.ru/cms/sites/all/themes/aeroflot/images/agents.gif) left center no-repeat; }
+div.main-footer .footer p#cargo_trans { background: url(//www.aeroflot.ru/cms/sites/all/themes/aeroflot/images/gruz.gif) left center no-repeat; }
+div.main-footer .footer p.ph_rss {background: url(//www.aeroflot.ru/cms/sites/all/themes/aeroflot/images/rss.gif) no-repeat 10px center; }
+
+div.main-footer .footer p.social_icons {padding-left: 0;}
+
+div.main-footer .cop { padding: 10px 0 0 0; }
+/* #1666 */

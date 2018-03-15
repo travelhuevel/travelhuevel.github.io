@@ -1,0 +1,448 @@
+html, body {
+    min-width: 1024px;
+}
+
+body {
+    color: #333333;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #02458D;
+}
+
+div.main-body {
+    position: relative;
+    z-index: 100;
+}
+
+div.main-container {
+    float: left;
+    margin: 0 -295px 0 0;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+div.main-body > div.main-container > div.main-content > h1 {
+    color: white;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+div.block-right {
+    float: right;
+    margin: 2em 15px 2em 0;
+    width: 250px;
+    position: relative;
+}
+
+div.block-right a {
+    display: block;
+    text-align: center;
+}
+
+div.block-right a img {
+    display: inline-block;
+    margin-bottom: 1.5em;
+}
+
+div.main-content {
+    margin: 2em 295px 2em 4em;
+}
+
+.page-type-ext div.main-content,
+.page-type-front_bonus div.main-content {
+    margin-right: 4em;
+}
+
+div.content {
+    color: #666666;
+    background-color: #ffffff;
+    padding: 2em;
+    border-bottom: 3px solid #FF8100;
+    min-height: 25em;
+}
+
+div.content > h1,
+div.content > div.pageTitle > h1,
+div.content > form > h1,
+p.news-detail-title {
+    color: #02458D;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: 1.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    background: url(images/h1_line.gif) left bottom repeat-x;
+}
+
+div.content h2, div.cargo-office-container label{
+    color: #2d7cc7;
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+div.cargo-office-container label {
+    display: block
+}
+
+div.content h3 {
+    color: #2d7cc7;
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    margin: 0.5em 0;
+    text-align: left;
+}
+
+div.content a {
+    color: #02458D;
+}
+
+div.content th,
+div.content td {
+    padding: 5px;
+}
+
+div.block-banner {
+    position: relative;
+    border-bottom: 3px solid #FF8100;
+}
+
+div.fl-down {
+    position: relative;
+    display: block;
+    outline: 0;
+    overflow: hidden;
+}
+
+div.fl-down a {
+    position: absolute;
+    display: block;
+}
+
+div.fl-down a img {
+    position: static;
+    display: block;
+}
+
+/* Breadcrumbs */
+#breadcrumbs {
+    line-height: 2.8em;
+    padding: 0 0 0 15px;
+    margin: 0;
+    background: url("images/breadcumb_arrow.gif") left center no-repeat;
+    color: #fff;
+}
+
+#breadcrumbs a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#breadcrumbs a:hover {
+    text-decoration: none;
+}
+
+#breadcrumbs a img {
+    float: left;
+    margin-right: 5px;
+    margin-top: 8px;
+    border: none;
+}
+
+/* Helpers */
+.clear0 {
+    height: 0;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* #5207 */
+.alarmbar {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 1001;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url(images/warning_bgrnd.jpg);
+    background-repeat:repeat-x; 
+    min-width: 1024px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 12px;
+    color: #3e669e;
+    width:100%;
+}
+
+.alarmbar.visible {
+    display: inline-block;
+}
+
+.alarmbar img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.alarmbar .alarm-block {
+    display: block;
+}
+
+.alarmbar .alarm-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.alarmbar a:hover {
+    color:#F00
+}
+
+.alarmbar .alarm-container {
+    max-width: 98%;
+}
+
+.alarmbar .alarm-container .alarm-row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.alarmbar .alarm-row .alarm-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.alarmbar .alarm-col {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    text-align: center;
+}
+
+.alarmbar .alarm-col.alarm-hidden-small {
+    text-align: right;
+}
+
+.alarmbar .alarm-col img {
+    border: 0;
+	margin-right:5px;
+}
+
+.alarmbar .alarm-col .alarm-col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.alarmbar .alarm-col-5 {
+    width: 10%;
+}
+
+.alarmbar .alarm-col-7 {
+    width: 86%;
+}
+
+.alarmbar .btn {
+    display: inline-block;
+    padding: 4px 6px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 15px;
+    color: #5a5a5a;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: top;
+    cursor: pointer;
+    text-decoration:none;
+    background-color: #f5f5f5;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #bbbbbb;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #a2a2a2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.alarmbar .btn:hover,
+.alarmbar .btn:active,
+.alarmbar .btn.active,
+.alarmbar .btn.disabled,
+.alarmbar .btn[disabled] {
+    color: #333333;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+}
+
+.alarmbar .btn:active,
+.alarmbar .btn.active {
+    background-color: #cccccc \9;
+}
+
+.alarmbar .btn:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    *background-color: #d9d9d9;
+    /* Buttons in IE7 don't get borders, so darken on hover */
+
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+         -moz-transition: background-position 0.1s linear;
+             -o-transition: background-position 0.1s linear;
+                    transition: background-position 0.1s linear;
+}
+
+.alarmbar .btn:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.alarmbar .btn.active,
+.alarmbar .btn:active {
+    background-color: #e6e6e6;
+    background-color: #d9d9d9 \9;
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+         -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+                    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.alarmbar .btn.disabled,
+.alarmbar .btn[disabled] {
+    cursor: default;
+    background-color: #e6e6e6;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+                    box-shadow: none;
+}
+.alarmbar .btn img{
+    margin:0;
+}
+
+div.cargo-office-container {
+    float:left;
+    margin-right:40px;
+}
+/* #5374 */
+div.main-header .add_charges {
+    color: #fff;
+    font-family: tahoma;
+    font-size: 12px;
+    position: absolute;
+    right: 28px;
+    text-decoration: underline;
+    top: 105px;
+    font-weight: 600;
+    text-shadow: 1px 1px 0 #3d5f86;
+}
+
+/* Breaking News */
+#breakingNews {
+    background: #f88733;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#breakingNews ul {
+    padding: 5px 0;
+    margin: 0 85px 0 380px;
+}
+
+#breakingNews li {
+    list-style: none;
+    margin: 5px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px #333;
+    font-size: 14px;
+}
+
+#breakingNews li p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#breakingNews li a {
+    color: #fff;
+}
+
+#breakingNews a.closeLink {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    color: #fff;
+    text-shadow: 1px 1px 2px #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/*26.09 letter from Koroteev*/
+.view-another-region h2{
+    font-size: 1.3em;
+}
+.view-another-region-items h2 {
+    color: #2d7cc7;
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+/* #6150 */
+.page-type-front div.fl-down {
+    margin-left: 336px;
+}
+
+.revision-info {
+    position: fixed;
+    top: 0; right: 0;
+    opacity: 0.5;
+    float: right;
+    z-index: 10000;
+    background-color: red;
+    color: white;
+}
+
+.etp-item > span {
+    padding: 10px 0 0;
+    font-weight: 700;
+    display: block;
+}
